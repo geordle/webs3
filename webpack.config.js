@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: "./src/backGroundComponent.js",
+    entry: "./src/index.js",
     mode: "development",
     output: {
         path: path.resolve(__dirname, "dist"),
