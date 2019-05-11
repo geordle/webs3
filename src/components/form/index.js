@@ -7,6 +7,8 @@ export class MonsterForm extends SopedComponent{
 
     constructor(){
         super(css, html, true, bootstrapCss);
+        this.username = "geordi";
+        this.color = "Green";
     }
 
 

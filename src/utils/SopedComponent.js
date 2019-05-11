@@ -19,27 +19,31 @@ export class SopedComponent extends HTMLElement {
             const property = value.getAttribute("g-model");
             let val;
             !this.hasOwnProperty(property) &&
-            Object.defineProperty(this, property, {
-                get: () => {
-                    return val;
-                },
-                set: newValue => {
-                    val = newValue;
-                    listOf.forEach(value1 => {
-                        if (value1.getAttribute("g-model") === property) {
-                            if (
-                                value1.type &&
-                                (value1.type === "text" ||
-                                    value1.type === "textarea")
-                            ) {
-                                value1.value = newValue;
-                            } else if (!value1.type) {
-                                value1.innerHTML = newValue;
-                            }
-                        }
-                    });
-                },
-            });
+                Object.defineProperty(this, property, {
+                    get: () => {
+                        return val;
+                    },
+                    set: newValue => {
+                        val = newValue;
+                        [...listOf.values()]
+                            .filter(
+                                element =>
+                                    element.getAttribute("g-model") === property
+                            )
+                            .forEach(value1 => {
+                                console.log(value1.type);
+                                if (
+                                    value1.type &&
+                                    (value1.type === "text" ||
+                                        value1.type === "textarea" || value1.type === "select-one")
+                                ) {
+                                    value1.value = newValue;
+                                } else if (!value1.type) {
+                                    value1.innerHTML = newValue;
+                                }
+                            });
+                    },
+                });
             value.addEventListener("input", () => {
                 this[property] = value.value;
             });
