@@ -9,10 +9,10 @@ export class AppComponent extends SopedComponent{
         super(css, html, true, bootstrapCss);
     }
 
-
     static register(){
         customElements.define("g-app", AppComponent);
     }
+
 
 }
 
