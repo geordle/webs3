@@ -9,6 +9,7 @@ export class MonsterForm extends SopedComponent{
         super(css, html, true, bootstrapCss);
         this.username = "geordi";
         this.color = "Green";
+        this.arms = 3;
     }
 
 
@@ -26,6 +27,7 @@ export class MonsterForm extends SopedComponent{
     }
 
     submitted(event){
+        this.username='awofeawef';
         event.preventDefault();
     }
 

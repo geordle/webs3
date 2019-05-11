@@ -9,7 +9,7 @@ export class SopedComponent extends HTMLElement {
         htmlStyleElement.replace(css);
         let htmlDivElement = document.createElement("div");
         htmlDivElement.innerHTML = html;
-
+        htmlDivElement.classList.add("base");
         htmlDivElement.querySelectorAll("[g-on]").forEach(value => {
             const [event, method] = value.getAttribute("g-on").split(":");
             value.addEventListener(event, arg => this[method](arg));
@@ -31,11 +31,10 @@ export class SopedComponent extends HTMLElement {
                                     element.getAttribute("g-model") === property
                             )
                             .forEach(value1 => {
-                                console.log(value1.type);
                                 if (
                                     value1.type &&
                                     (value1.type === "text" ||
-                                        value1.type === "textarea" || value1.type === "select-one")
+                                        value1.type === "textarea" || value1.type === "select-one" || value1.type === "range")
                                 ) {
                                     value1.value = newValue;
                                 } else if (!value1.type) {
