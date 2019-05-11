@@ -7,7 +7,12 @@ export class BackGroundComponent extends SopedComponent{
 
     constructor(){
         super(css, html, true);
+
+        this.canvas = this.root.querySelector('canvas');
+        this.startCanvas();
     }
+
+
 
 
     static register(){
@@ -15,7 +20,10 @@ export class BackGroundComponent extends SopedComponent{
     }
 
 
-
+    startCanvas() {
+        let context = this.canvas.getContext('2d');
+        context.strokeRect(0,0,20, 20);
+    }
 }
 
 
