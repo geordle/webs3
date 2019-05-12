@@ -15,7 +15,7 @@
     </div>
     <div class="form-group">
         <label for="formControlRange">Amount of legs <span g-model="arms"></span> </label>
-        <input g-model="arms"  type="range" class="form-control-range" id="formControlRange" g-on="input:sliderChange" min="0" max="10">
+        <input g-model="arms"  type="range" g-bind="max:maxArms" class="form-control-range" id="formControlRange" min="0" max="10">
     </div>
 
     <div class="form-group" id="arms">

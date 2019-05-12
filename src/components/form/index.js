@@ -9,7 +9,9 @@ export class MonsterForm extends SopedComponent{
         super(css, html, true, bootstrapCss);
         this.username = "geordi";
         this.color = "Green";
+        this.observe('arms', this.sliderChange);
         this.arms = 3;
+        this.maxArms = 4;
     }
 
 
@@ -18,10 +20,10 @@ export class MonsterForm extends SopedComponent{
     }
 
 
-    sliderChange({target:{value}}){
+    sliderChange(val){
         let element = this.root.querySelector('#arms');
         element.innerHTML = "";
-        for (let i = 0; i < value; i++) {
+        for (let i = 0; i < val; i++) {
             element.appendChild(createElementFromHTML('<input type="text" class="form-control mt-1"  placeholder="arms">'))
         }
     }
