@@ -6,14 +6,15 @@ export function createElementFromHTML(htmlString) {
     return div.firstChild;
 }
 
-export function changeElementContentAction(element) {
-    return newValue => {
+export function changeElementContentAction(element, vm, property) {
+    return () => {
+        const value = vm[property];
         if (
             equalsAny(element.type, "text", "textarea", "select-one", "range")
         ) {
-            element.value = newValue;
+            element.value = value;
         } else if (!element.type) {
-            element.innerHTML = newValue;
+            element.innerHTML = value;
         }
     };
 }

@@ -1,0 +1,40 @@
+<form  g-on="submit:submitted"  onsubmit="return false" >
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Monster type</label>
+        <select g-model="monsterType" class="form-control" id="exampleFormControlSelect1">
+            <option>Water</option>
+            <option>Vuur</option>
+            <option>Aarde</option>
+            <option>Wind</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="name" >Name</label>
+        <input g-model="monsterName" type="text" class="form-control" id="name" placeholder="one">
+    </div>
+    <div class="form-group">
+        <label for="formControlRange">Amount of arms <span g-model="arms"></span> </label>
+        <input g-model="arms"  type="range" g-bind="max:maxArms" class="form-control-range" id="formControlRange" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="legsrange">Amount of legs <span g-model="legs"></span> </label>
+        <input g-model="legs" id="legsrange"  type="range" g-bind="max:maxLegs" class="form-control-range" min="0">
+    </div>
+
+    <div class="form-group" id="arms">
+        <input type="text" class="form-control"  placeholder="arms">
+    </div>
+    <div class="form-group">
+        <label for="fur">Fur type</label>
+        <select g-model="fur" class="form-control" id="fur">
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="color">Coat color</label>
+            <select g-model="color" class="form-control" id="color">
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

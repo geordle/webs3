@@ -1,4 +1,4 @@
-import { MonsterForm } from "./form";
+import { MonsterForm } from "./form/monsterForm";
 import { AppComponent } from "./app";
 import { BackGroundComponent } from "./background/backGroundComponent";
 

@@ -6,7 +6,7 @@ import { bootstrapCss } from "../../externalStyles/bootstrap";
 export class AppComponent extends SopedComponent{
 
     constructor(){
-        super(css, html, true, bootstrapCss);
+        super({ css, html, isScoped: true, styleSheets: [bootstrapCss] });
     }
 
     static register(){
