@@ -1,23 +1,30 @@
-import Monster from "./monster";
+import { Monster } from "./monster";
+import { MonsterType } from "./monsterType";
+
 
 export class WindMonster extends Monster{
 
-    maxArms = 2;
-    armType = ["Wings", "Claw wings"];
 
-    get maxLegs() {
-        return 4;
+    /**
+     * @param {Monster} original
+     * */
+    constructor(original){
+        super(MonsterType.EARTH, original);
     }
 
-    legSteps = 2;
     fur = "Scales";
-
-    furTypes = ["Scales", "Slime", "Hair"];
     canFly = false;
     canSwim = true;
-    colors = ["Blue", "Green", "Red"];
     color = "Blue";
+    eyes = 2;
 
-    maxEyes= 2;
-    minEyes = 2;
+    _arms = 2;
+
+    set arms(value){
+        this._arms = 2;
+    }
+
+    get arms(){
+        return this._arms;
+    }
 }

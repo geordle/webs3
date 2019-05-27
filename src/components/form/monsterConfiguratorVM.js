@@ -1,94 +1,134 @@
 import MonsterFactory from "../../domain/monsterFactory";
 import { ViewModel } from "../../utils/viewModel";
+import { genUuid } from "../../utils/logicHelpers";
+import { ViewModelLocator } from "../viewModelLocator";
+
 
 export class MonsterConfiguratorVM extends ViewModel {
     constructor() {
         super();
+        this.drawButtonText = "save";
+        this.isEditing = false;
+        this.monsterConfiguratorStateHolder = ViewModelLocator.getInstance().monsterConfiguratorStateHolder;
         this.monsterType = "Water";
-
 
     }
 
+    switchIsDrawing() {
+        this.isEditing = !this.isEditing;
+        this.drawButtonText = this.isEditing ? "draw" : "save";
+        if(!this.isEditing) {
+            this.monsterConfigurator.save();
+        }
+    }
+
+
     get maxEyes() {
-        return this.monster.maxEyes;
+        return this.monsterConfigurator.maxEyes;
     }
 
     get minEyes() {
-        return this.monster.maxEyes;
+        return this.monsterConfigurator.minEyes;
     }
 
+
     get maxArms() {
-        return this.monster.maxArms;
+        return this.monsterConfigurator.maxArms;
     }
 
     get maxLegs() {
-        return this.monster.maxLegs;
+        return this.monsterConfigurator.maxLegs;
+    }
+    get minLegs() {
+        return this.monsterConfigurator.minLegs;
     }
 
+
     get colors() {
-        return this.monster.colors;
+        return this.monsterConfigurator.colors;
     }
 
     get furTypes() {
-        return this.monster.furTypes;
+        return this.monsterConfigurator.furTypes;
     }
 
     set arms(value) {
-        this.monster.arms = value;
-        this.notifyPropertyChanged("maxLegs", "legs");
+        this.monsterConfigurator.arms = Number(value);
+        this.notifyPropertyChanged("maxLegs", "legs", "minLegs");
     }
 
     get arms() {
-        return this.monster.arms;
+        return this.monsterConfigurator.arms;
     }
 
     set legs(value) {
-        this.monster.legs = value;
-    }
-    
-    get legs() {
-        return this.monster.legs;
+        this.monsterConfigurator.legs = value;
     }
 
-    get monsterName(){
-        return this.monster.name;
+    get legs() {
+        return this.monsterConfigurator.legs;
+    }
+
+    get eyes() {
+        return this.monsterConfigurator.eyes;
+    }
+
+    set eyes(value) {
+        this.monsterConfigurator.eyes = value;
+    }
+
+    get legSteps() {
+        return this.monsterConfigurator.legSteps;
+    }
+
+    get monsterName() {
+        return this.monsterConfigurator.name;
     }
 
     set monsterName(value) {
-        if(value.length < 10){
-            this.monster.name = value;
+        if (value.length < 10) {
+            this.monsterConfigurator.name = value;
         }
     }
 
     set fur(value) {
-        this.monster.fur = value;
+        this.monsterConfigurator.fur = value;
     }
 
-    get fur(){
-        return this.monster.fur;
-    }
-    get color(){
-        return this.monster.color;
+    get fur() {
+        return this.monsterConfigurator.fur;
     }
 
-    set color(value){
-        this.monster.color = value;
+    get color() {
+        return this.monsterConfigurator.color;
     }
 
-    set monsterType(val) {
-        this._monsterType = val;
-        this.monster = MonsterFactory.getInstance().create(val);
-        this.notifyAllPropertyChanged('monsterType');
+    set color(value) {
+        this.monsterConfigurator.color = value;
+    }
+
+    set monsterType(type) {
+        this._monsterType = type;
+        this.monsterConfiguratorStateHolder.setType(type);
+        this.notifyAllPropertyChanged("monsterType");
     }
 
     get monsterType() {
         return this._monsterType;
     }
 
-    submitted() {
-        console.log();
-        console.log(this);
+    onDragStart(event) {
+        event.dataTransfer.setData("monsterConfigurator", JSON.stringify(this.monsterConfigurator.saveMonster()));
     }
 
+
+    get monsterConfigurator(){
+        return this.monsterConfiguratorStateHolder.configurator;
+    }
+
+
+    get armTypes() {
+        return this.monsterConfigurator.armTypes;
+    }
 
 }

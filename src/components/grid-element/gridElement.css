@@ -1,0 +1,14 @@
+
+.base {
+    height: 100%;
+    width: 100%;
+}
+
+.grid-element {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+.rock {
+    background-color:black;
+}

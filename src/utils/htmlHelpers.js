@@ -18,3 +18,10 @@ export function changeElementContentAction(element, vm, property) {
         }
     };
 }
+
+export function setOptionsOfSelect(element, optionsList) {
+    element.innerHTML = "";
+    for (const option of optionsList) {
+        element.appendChild(createElementFromHTML(`<option>${option}</option>`));
+    }
+}

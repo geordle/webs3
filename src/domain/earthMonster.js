@@ -1,22 +1,27 @@
-import Monster from "./monster";
+import { MonsterType } from "./monsterType";
+import { Monster } from "./monster";
 
-export class EarthMonster extends Monster{
-    maxArms = 2;
-    armType = ["Claws"];
+export default class EarthMonster extends Monster{
 
-    get maxLegs() {
-        return 4;
+    /**
+     * @param {Monster} original
+     * */
+    constructor(original){
+        super(MonsterType.EARTH, original);
     }
 
-    legSteps = 2;
-
     fur = "Scales";
-
     color = "Purple";
-    furTypes = ["Scales", "Hair", "Slime"];
     canFly = false;
     canSwim = true;
-    colors = ["Purple", "Orange", "White"];
-    maxEyes= 2;
-    minEyes = 2;
+    eyes=2;
+    _arms = 2;
+    legs = 2;
+    set arms(value){
+        this._arms = 2;
+    }
+
+    get arms(){
+        return this._arms;
+    }
 }

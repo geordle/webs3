@@ -1,23 +1,36 @@
+import { MonsterType } from "./monsterType";
 
-export default class Monster {
+export class Monster {
 
-
+    uuid;
     _arms = 0;
     name = "";
-    set arms(val){
-        this._arms = val;
-    }
-
     fur = "";
-
-    legSteps = 1;
-
-    get arms(){
-        return this._arms ;
-    }
-
+    armType = "";
     eyes = 0;
-    coatType = "";
     color = "";
     legs = 0;
+    discriminator;
+
+
+    get arms() {
+        return this._arms;
+    }
+    set arms(value) {
+        return this._arms =value;
+    }
+
+
+
+    constructor(discriminator, original) {
+        if(original && original.uuid && original.discriminator === discriminator){
+            Object.assign(this, original);
+        }
+        else if(original){
+            this.uuid = original.uuid;
+            this.name = original.name;
+        }
+    }
+
+
 }

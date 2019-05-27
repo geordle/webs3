@@ -3,10 +3,9 @@ import { changeElementContentAction } from "./htmlHelpers";
 /**
  * @abstract
  */
-export class SopedComponent extends HTMLElement {
+export class GComponent extends HTMLElement {
     constructor({ css, html, isScoped = true, styleSheets = [], vm }) {
         super();
-        this._vm = vm;
         this._modelMap = new Map();
         let root = this;
         if (isScoped) {
@@ -17,20 +16,27 @@ export class SopedComponent extends HTMLElement {
         let htmlDivElement = document.createElement("div");
         htmlDivElement.innerHTML = html;
         htmlDivElement.classList.add("base");
-        if (this._vm) {
-            this._bindEventHandlers(htmlDivElement);
-            this._bindGModel(htmlDivElement);
-            this._bindPropBinding(htmlDivElement);
-        }
         this._bindHtmlProperties();
         root.appendChild(htmlDivElement);
         root.adoptedStyleSheets = [htmlStyleElement, ...styleSheets];
         this.root = root;
+        if (vm) {
+            this._bindVm(vm);
+        }
+    }
+
+    _bindVm(vm) {
+        this._vm = vm;
+        let htmlDivElement = this.root.querySelector(".base");
+        this._bindEventHandlers(htmlDivElement);
+        this._bindGModel(htmlDivElement);
+        this._bindPropBinding(htmlDivElement);
     }
 
     _bindEventHandlers(htmlDivElement) {
         htmlDivElement.querySelectorAll("[g-on]").forEach(value => {
             const [event, method] = value.getAttribute("g-on").split(":");
+
             value.addEventListener(event, arg => this._vm[method](arg));
         });
     }
@@ -42,7 +48,7 @@ export class SopedComponent extends HTMLElement {
             const changeAction = changeElementContentAction(
                 element,
                 this._vm,
-                property
+                property,
             );
             element.addEventListener("input", () => {
                 this._vm[property] = element.value;
@@ -76,6 +82,7 @@ export class SopedComponent extends HTMLElement {
                     action(getter.call(this._vm));
                 }
             },
+            configurable: true,
         });
     }
 
@@ -95,13 +102,21 @@ export class SopedComponent extends HTMLElement {
 
     _bindPropBinding(htmlDivElement) {
         htmlDivElement.querySelectorAll("[g-bind]").forEach(value => {
-            const [prop, boundField] = value.getAttribute("g-bind").split(":");
+            value.getAttribute("g-bind").split(",").forEach((binding) => {
+                const [prop, boundField] = binding.split(":");
 
-            this.observe(boundField, newValue => {
-                value[prop] = newValue;
+                this.observe(boundField, newValue => {
+                    if (newValue || Number.isInteger(newValue)) {
+                        value[prop] = newValue;
+                    } else {
+                        delete value.removeAttribute(prop);
+                    }
+                });
+
             });
         });
     }
+
 
     /**
      * @abstract
@@ -109,11 +124,11 @@ export class SopedComponent extends HTMLElement {
     static register() {
         throw new Error(
             "Component not registered\n" +
-                " Example:   static register(){\n" +
-                '        customElements.define("monster-form", MonsterForm);\n' +
-                "    }" +
-                "" +
-                ""
+            " Example:   static register(){\n" +
+            "        customElements.define(\"monsterConfigurator-form\", MonsterForm);\n" +
+            "    }" +
+            "" +
+            "",
         );
     }
 

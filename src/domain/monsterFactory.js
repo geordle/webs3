@@ -1,25 +1,25 @@
-import { WaterMonster } from "./waterMonster";
-import { EarthMonster } from "./earthMonster";
-import { WindMonster } from "./windMonster";
-import { FireMonster } from "./fireMonster";
+import { EarthMonsterConfigurator } from "./configurators/earthMonsterConfigurator";
+import { WaterMonsterConfigurator } from "./configurators/waterMonsterConfigurator";
+import { FireMonsterConfigurator } from "./configurators/fireMonsterConfigurator";
+import { WindMonsterConfigurator } from "./configurators/windMonsterConfigurator";
 
-export default class MonsterFactory {
+export default class MonsterConfiguratorFactory {
 
     /**
      *
      * @param name
-     * @returns {Monster}
+     * @returns {MonsterConfigurator}
      */
     create(name) {
         switch (name) {
             case "Water":
-                return new WaterMonster();
+                return new WaterMonsterConfigurator();
             case "Aarde":
-                return new EarthMonster();
+                return new EarthMonsterConfigurator();
             case "Wind":
-                return new WindMonster();
+                return new WindMonsterConfigurator();
             case "Vuur":
-                return new FireMonster();
+                return new FireMonsterConfigurator();
             default:
                 throw new Error(`${name} undefined`);
         }
@@ -28,11 +28,11 @@ export default class MonsterFactory {
 
     /**
      *
-     * @returns {MonsterFactory}
+     * @returns {MonsterConfiguratorFactory}
      */
     static getInstance() {
         if(!this.instance){
-            this.instance = new MonsterFactory();
+            this.instance = new MonsterConfiguratorFactory();
         }
         return this.instance;
     }

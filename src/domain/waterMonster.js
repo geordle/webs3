@@ -1,39 +1,30 @@
-import Monster from "./monster";
+import {Monster} from "./monster";
+import { MonsterType } from "./monsterType";
 
-export class WaterMonster extends Monster {
+export default class WaterMonster extends Monster {
+    fur = "Scales";
+    color = "Blue";
+    canFly = false;
+    canSwim = true;
 
-    constructor(){
-        super();
-
-
+    /**
+     * @param {Monster} original
+     * */
+    constructor(original){
+        super(MonsterType.WATER, original);
     }
 
-    set arms(val){
-        this._arms = val;
-        if(val > 4){
-            this.legs = 0;
-        }
-    }
 
-    get arms(){
+    get arms() {
         return this._arms;
     }
 
-
-    maxArms = 8;
-    armType = ["Tentacles", "Fins"];
-
-    get maxLegs() {
-        return this.arms <= 4? 4: 0;
+    set arms(val) {
+        this._arms = val;
+        console.log(val);
+        if (val > 4) {
+            this.legs = 0;
+        }
     }
-
-    fur = "Scales";
-    color = "Blue";
-    furTypes = ["Scales", "Slime"];
-    canFly = false;
-    canSwim = true;
-    colors = ["Blue", "Green", "Red"];
-
-    maxEyes= 8;
-    minEyes = 0;
 }
+

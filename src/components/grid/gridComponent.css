@@ -1,0 +1,35 @@
+.panel{
+    border: 1px solid black;
+    margin: 5px;
+}
+
+g-form {
+    min-width: 230px;
+}
+
+.base {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+}
+
+div {
+    background-color: rgba(1, 1, 1, 0.1);
+    height: 100%;
+    width: 100%;
+}
+
+g-element {
+    position: absolute;
+    width: 9.8%;
+    height: 9.8%;
+    border: solid black 1px;
+    margin: 0.1%;
+}
+
+
+
+.rock {
+    background-color:black;
+}

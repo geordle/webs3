@@ -1,4 +1,10 @@
 .panel{
     border: 1px solid black;
-    margin: 5px;
+    padding: 0;
+    min-width: 230px;
+    height: 100%;
+    width: 100%;
+}
+
+g-form {
 }

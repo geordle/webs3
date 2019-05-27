@@ -1,0 +1,35 @@
+import css from "./gridComponent.css";
+import html from "./gridComponent.html";
+import { GComponent } from "../../utils/GComponent";
+import { bootstrapCss } from "../../externalStyles/bootstrap";
+import field from "../../domain/field";
+import { createElementFromHTML } from "../../utils/htmlHelpers";
+
+export class GridComponent extends GComponent {
+    constructor() {
+        super({ css, html, isScoped: true, styleSheets: [bootstrapCss] });
+
+        this.generateSquares();
+
+    }
+
+    static register() {
+        customElements.define("g-grid", GridComponent);
+    }
+
+
+    generateSquares() {
+        const {grid, name} = field[0];
+        field[0].grid.forEach((row, rowIndex) => {
+            row.Columns.forEach((el, columnIndex) => {
+                let node = createElementFromHTML(`<g-element ${el === "1" ? 'is-rock': ''}   x-pos="${row.name}" y-pos="${columnIndex}" region-name="${name}"></g-element>`);
+                node.style.left= `${columnIndex * 10 }%`;
+                node.style.top = `${rowIndex * 10 }%`;
+
+                this.root.querySelector('.base').appendChild(node);
+            })
+
+        })
+
+    }
+}

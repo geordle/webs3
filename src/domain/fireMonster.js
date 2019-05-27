@@ -1,20 +1,34 @@
-import Monster from "./monster";
+import { Monster } from "./monster";
+import { MonsterType } from "./monsterType";
 
-export class FireMonster extends Monster {
-    maxArms = 6;
-    armType = ["Tentacles", "Fins"];
+export class FireMonster extends Monster{
 
-    get maxLegs() {
-        return 2;
+    /**
+     * @param {Monster} original
+     * */
+    constructor(original){
+        super(MonsterType.FIRE, original);
     }
 
     fur = "Scales";
     color = "Red";
-    furTypes = ["Scales", "Feathers"];
-    canFly = false;
-    canSwim = true;
-    colors = ["Brown", "Orange", "Red"];
 
-    maxEyes= 4;
-    minEyes = 0;
+    set arms(val) {
+        this._arms = val;
+        if (val > 2) {
+            this.legs = 0;
+        } else {
+            this.legs =2;
+        }
+    }
+
+    get arms() {
+        return this._arms;
+    }
+
+
+
+    legs = 2;
+
 }
+
