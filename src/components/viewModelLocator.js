@@ -1,10 +1,18 @@
 import { MonsterConfiguratorVM } from "./form/monsterConfiguratorVM";
 
+class FieldViewModel {
+    constructor() {
+        this.fieldtype ="water";
+    }
+}
+
 export class ViewModelLocator {
 
 
     constructor() {
         this.registerSingleton(MonsterConfiguratorVM, "monsterConfigurator");
+        this.registerSingleton(FieldViewModel, "fieldViewModel");
+
     }
 
 
@@ -19,6 +27,8 @@ export class ViewModelLocator {
             },
         });
     }
+
+
 
     static getInstance() {
         if (!ViewModelLocator._instance) {

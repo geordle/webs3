@@ -1,6 +1,17 @@
 <div class="container-fluid p-5 vh-100 ">
-    <div class="row h-100" >
-        <g-form  class="h-100 col-2 panel"></g-form>
-        <div class="col-9 panel"><g-background></g-background></div>
+    <div class="row h-100">
+        <g-form class="h-100 col-2 panel"></g-form>
+        <div class="col-9">
+            <select g-model="fieldtype" value="aaa">
+                <option>water</option>
+                <option>vuur</option>
+                <option>aarde</option>
+                <option>wind</option>
+            </select>
+            <div class="panel">
+                <g-background></g-background>
+            </div>
+
+        </div>
     </div>
 </div>
