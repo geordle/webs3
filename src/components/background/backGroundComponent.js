@@ -4,6 +4,7 @@ import { SopedComponent } from "../../utils/SopedComponent";
 import { bootstrapCss } from "../../externalStyles/bootstrap";
 import { createElementFromHTML } from "../../utils/htmlHelpers";
 import { randomFill } from "crypto";
+import { compileFunction } from "vm";
 export class BackGroundComponent extends SopedComponent {
 
     constructor() {
@@ -96,13 +97,12 @@ export class BackGroundComponent extends SopedComponent {
         }
 
         function move() {
+
             for (var b = 0; b < particles.length; b++) {
                 var p = particles[b];
-                p.x += p.xs;
-                p.y += p.ys;
+                    p.x += p.xs;
                 if (p.x > w || p.y > h) {
-                    p.x = Math.random() * w;
-                    p.y = -20;
+                    p.x = Math.random() * w - 100;
                 }
             }
         }
@@ -123,7 +123,7 @@ export class BackGroundComponent extends SopedComponent {
                     x: Math.random() * w,
                     y: Math.random() * h,
                     l: Math.random() * 1,
-                    xs: -4 + Math.random() * 4 + 2,
+                    xs:  Math.random() * 4,
                     ys: Math.random() * 10 + 10
                 })
             }
