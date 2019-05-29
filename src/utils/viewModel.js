@@ -7,7 +7,6 @@ export class ViewModel {
                     property
                 );
                 if (desciptor) {
-
                     const setter = Object.getOwnPropertyDescriptor(
                         this,
                         property
@@ -21,7 +20,7 @@ export class ViewModel {
     }
 
     notifyAllPropertyChanged(...except) {
-        let ownPropertyDescriptors = [...Object.keys(Object.getOwnPropertyDescriptors(this))]
+        let ownPropertyDescriptors = Object.keys(Object.getOwnPropertyDescriptors(this))
             .filter(value => except.indexOf(value) === -1);
         this.notifyPropertyChanged(...ownPropertyDescriptors);
     }
