@@ -1,12 +1,12 @@
 import css from "./index.css";
 import html from "./index.html";
-import { SopedComponent } from "../../utils/SopedComponent";
 import { bootstrapCss } from "../../externalStyles/bootstrap";
 import { createElementFromHTML } from "../../utils/htmlHelpers";
 import { compileFunction } from "vm";
 import { ViewModelLocator } from "../viewModelLocator";
+import { GComponent } from "../../utils/GComponent";
 
-export class BackGroundComponent extends SopedComponent {
+export class BackGroundComponent extends GComponent {
 
     constructor() {
         super({ css, html, isScoped: true, vm: ViewModelLocator.getInstance().fieldViewModel });

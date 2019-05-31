@@ -3,16 +3,18 @@ import { GridElementVM } from "./grid-element/gridElementVM";
 import { BackgroundViewModel } from "./backgroundViewModel";
 import { MonsterConfiguratorStateHolder } from "../domain/configurators/monsterConfiguratorStateHolder";
 
-
+class FieldViewModel {
+    constructor() {
+        this.fieldtype ="water";
+    }
+}
 
 export class ViewModelLocator {
     constructor() {
         this._gridElementMap = new Map();
         this._registerSingleton(MonsterConfiguratorVM, "monsterConfigurator");
-        this._registerSingleton(BackgroundViewModel, 'background');
         this._registerSingleton(MonsterConfiguratorStateHolder, "monsterConfiguratorStateHolder");
-        this._registerSingleton(MonsterConfiguratorVM, "monsterConfigurator");
-
+        this._registerSingleton(FieldViewModel, "fieldViewModel");
     }
 
     getGridElementViewModel(x, y, name) {

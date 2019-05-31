@@ -10,7 +10,7 @@ import { ViewModelLocator } from "../viewModelLocator";
 export class AppComponent extends GComponent{
 
     constructor(){
-        super({ css, html, isScoped: true, styleSheets: [bootstrapCss], vm: ViewModelLocator.getInstance().background });
+        super({ css, html, isScoped: true, styleSheets: [bootstrapCss], vm: ViewModelLocator.getInstance().fieldViewModel });
     }
 
     static register(){
