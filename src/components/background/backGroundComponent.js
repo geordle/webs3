@@ -1,8 +1,5 @@
 import css from "./index.css";
 import html from "./index.html";
-import { bootstrapCss } from "../../externalStyles/bootstrap";
-import { createElementFromHTML } from "../../utils/htmlHelpers";
-import { compileFunction } from "vm";
 import { ViewModelLocator } from "../viewModelLocator";
 import { GComponent } from "../../utils/GComponent";
 
@@ -10,6 +7,16 @@ export class BackGroundComponent extends GComponent {
 
     constructor() {
         super({ css, html, isScoped: true, vm: ViewModelLocator.getInstance().fieldViewModel });
+
+       this.canv1 = this.root.getElementById('canvas1');
+       this.canv2 = this.root.getElementById('canvas2');
+       this.canv3 = this.root.getElementById('canvas3');
+       this.canv4 = this.root.getElementById('canvas4');
+
+       this.rain();
+       this.fire();
+       this.earth();
+       this.wind();
 
         this.canv = this.root.querySelector('canvas');
         this.observe("fieldtype", () => { 
@@ -25,19 +32,30 @@ export class BackGroundComponent extends GComponent {
     }
 
     startCanvas(type) {
-        let context = this.canv.getContext('2d');
         switch (type) {
             case "water":
-                this.rain();
+                this.canv1.style.visibility='visible';
+                this.canv2.style.visibility='hidden';
+                this.canv3.style.visibility='hidden';
+                this.canv4.style.visibility='hidden';
                 break;
             case "aarde":
-                this.earth();
+                this.canv1.style.visibility='hidden';
+                this.canv2.style.visibility='visible';
+                this.canv3.style.visibility='hidden';
+                this.canv4.style.visibility='hidden';
                 break;
             case "vuur":
-                this.fire();
+                this.canv1.style.visibility='hidden';
+                this.canv2.style.visibility='hidden';
+                this.canv3.style.visibility='visible';
+                this.canv4.style.visibility='hidden';
                 break;
             case "wind":
-                this.wind();
+                this.canv1.style.visibility='hidden';
+                this.canv2.style.visibility='hidden';
+                this.canv3.style.visibility='hidden';
+                this.canv4.style.visibility='visible';
                 break;
         }
     }
@@ -67,10 +85,10 @@ export class BackGroundComponent extends GComponent {
             }
         }
 
-        if (this.canv.getContext) {
-            var ctx = this.canv.getContext('2d');
-            var w = this.canv.width;
-            var h = this.canv.height;
+        if (this.canv1.getContext) {
+            var ctx = this.canv1.getContext('2d');
+            var w = this.canv1.width;
+            var h = this.canv1.height;
             ctx.strokeStyle = 'rgba(174,194,224,0.5)';
             ctx.lineWidth = 1;
             ctx.lineCap = 'round';
@@ -123,10 +141,10 @@ export class BackGroundComponent extends GComponent {
             }
         }
 
-        if (this.canv.getContext) {
-            var ctx = this.canv.getContext('2d');
-            var w = this.canv.width;
-            var h = this.canv.height;
+        if (this.canv4.getContext) {
+            var ctx = this.canv4.getContext('2d');
+            var w = this.canv4.width;
+            var h = this.canv4.height;
             ctx.strokeStyle = 'rgba(174,194,224,0.5)';
             ctx.lineWidth = 1;
             ctx.lineCap = 'round';
@@ -157,7 +175,7 @@ export class BackGroundComponent extends GComponent {
 
 
     fire() {
-        this.x = this.canv
+        this.x = this.canv3;
         var CANVAS_WIDTH = window.innerWidth / 3;
         var CANVAS_HEIGHT = window.innerHeight / 3;
         var BASE_COLORS = 768; // 256 reds + 256 yellow/orange + 256 orange/whites
@@ -259,8 +277,7 @@ export class BackGroundComponent extends GComponent {
     }
 
     earth() {
-        this.canv
-        var canvas = this.canv;
+        var canvas = this.canv2;
         var ctx = canvas.getContext("2d");
 
         //full with height
