@@ -8,7 +8,6 @@ canvas{
     height: 100%;
 }
 
-#wrapper{position:relative;}
 #canvas1{position:absolute; border:1px solid red;}
 #canvas2{position:absolute; border:1px solid blue;}
 #canvas3{position:absolute; border:1px solid green;}
