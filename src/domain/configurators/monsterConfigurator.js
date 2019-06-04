@@ -2,8 +2,7 @@
  * @property {Monster} _monster
 * */
 import { Monster } from "../monster";
-import { genUuid } from "../../utils/logicHelpers";
-
+import { MonsterDao } from "./monsterDao";
 
 export default class MonsterConfigurator {
 
@@ -88,11 +87,7 @@ export default class MonsterConfigurator {
 
 
     save() {
-        console.log(this._monster);
-        if(!this._monster.uuid){
-            console.log('saving');
-            this._monster.uuid = genUuid();
-        }
+        MonsterDao.getInstance().save(this._monster);
     }
 }
 
