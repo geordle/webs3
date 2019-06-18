@@ -1,7 +1,9 @@
-import MonsterFactory from "../../domain/monsterFactory";
+import MonsterFactory from "../../domain/monsterConfiguratorFactory";
 import { ViewModel } from "../../utils/viewModel";
 import { genUuid } from "../../utils/logicHelpers";
 import { ViewModelLocator } from "../viewModelLocator";
+import { StoragePrefix } from "../../utils/Constants";
+import { MonsterDao } from "../../domain/configurators/monsterDao";
 
 
 export class MonsterConfiguratorVM extends ViewModel {
@@ -10,18 +12,22 @@ export class MonsterConfiguratorVM extends ViewModel {
         this.drawButtonText = "save";
         this.isEditing = false;
         this.monsterConfiguratorStateHolder = ViewModelLocator.getInstance().monsterConfiguratorStateHolder;
-        this.monsterType = "Water";
+        const monster = MonsterDao.getInstance().getMonsterByLocation({ region: 0, x: 0, y: 0 });
+        if(monster){
+            this.monsterConfiguratorStateHolder.setMonster(monster);
+        }
 
+        this.monsterType = "Water";
     }
 
     switchIsDrawing() {
         this.isEditing = !this.isEditing;
         this.drawButtonText = this.isEditing ? "draw" : "save";
-        if(!this.isEditing) {
-            this.monsterConfigurator.save();
-        }
     }
 
+    get hasExistingMonster(){
+        return !!this.monsterConfigurator.uuid;
+    }
 
     get maxEyes() {
         return this.monsterConfigurator.maxEyes;
@@ -31,6 +37,9 @@ export class MonsterConfiguratorVM extends ViewModel {
         return this.monsterConfigurator.minEyes;
     }
 
+    get cantSave() {
+        return  !this.monsterConfigurator.name || this.monsterConfigurator.name.length === 0;
+    }
 
     get maxArms() {
         return this.monsterConfigurator.maxArms;
@@ -86,9 +95,11 @@ export class MonsterConfiguratorVM extends ViewModel {
     }
 
     set monsterName(value) {
+
         if (value.length < 10) {
             this.monsterConfigurator.name = value;
         }
+        this.notifyPropertyChanged('cantSave');
     }
 
     set fur(value) {
@@ -118,17 +129,73 @@ export class MonsterConfiguratorVM extends ViewModel {
     }
 
     onDragStart(event) {
-        event.dataTransfer.setData("monsterConfigurator", JSON.stringify(this.monsterConfigurator.saveMonster()));
+        this.monsterConfigurator.save();
+        event.dataTransfer.setData("monsterConfigurator", JSON.stringify({x: 0,y:0,region:0}));
     }
 
+    get image(){
+       return  this.monsterConfigurator.image;
+    }
+    set image(value){
+        this.monsterConfigurator.image = value;
+    }
 
     get monsterConfigurator(){
         return this.monsterConfiguratorStateHolder.configurator;
     }
 
+    get armType(){
+         return this.monsterConfigurator.armType;
+    }
+
+    set armType(value){
+        this.monsterConfigurator.armType = value;
+    }
+
+    reset = false;
 
     get armTypes() {
         return this.monsterConfigurator.armTypes;
     }
+
+    get power(){
+        return this.monsterConfigurator.power;
+    }
+
+    set power(value){
+        this.monsterConfigurator.power = value;
+    }
+
+    update(){
+        this.monsterConfiguratorStateHolder.reset();
+        this.isEditing = false;
+        this.reset = true;
+        this.notifyAllPropertyChanged();
+    }
+
+
+    onDragOver(event) {
+        if (!this.isRock) {
+            event.preventDefault();
+        }
+    }
+
+
+    onElementDropped(par) {
+        const id = par.dataTransfer.getData("monsterConfigurator");
+        const origin= JSON.parse(id);
+        try {
+            
+        const monster = MonsterDao.getInstance().moveMonster({ region: 0, x: 0, y: 0 }, origin);
+        this.monsterConfiguratorStateHolder.setMonster(monster);
+        this.switchIsDrawing();
+        this.notifyAllPropertyChanged();
+        } catch (e) {
+
+        }
+        
+    }
+
+
 
 }

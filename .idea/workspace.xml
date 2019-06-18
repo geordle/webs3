@@ -2,14 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7146134c-595c-4e44-a62f-b29bfd9801b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/background/fireDrawer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/configurators/monsterDao.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fieldViewModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/incinarator/incinarator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/incinarator/incinarator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/incinarator/incinarator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/incinarator/incinaratorVM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/monster/monster.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/monster/monster.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/monster/monsterElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/monster/monsterVM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/configurators/monsterBindable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/configurators/monsterParser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/background/backGroundComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/background/backGroundComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/background/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/background/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/componentModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/componentModule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/monsterForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/monsterForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/monsterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/monsterForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid/gridComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid/gridComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid/gridComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid/gridComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/viewModelLocator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewModelLocator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/configurators/earthMonsterConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/configurators/earthMonsterConfigurator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/configurators/monsterConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/configurators/monsterConfigurator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/configurators/monsterConfiguratorStateHolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/configurators/monsterConfiguratorStateHolder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/configurators/monsterDao.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/configurators/monsterDao.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/configurators/waterMonsterConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/configurators/waterMonsterConfigurator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/configurators/windMonsterConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/configurators/windMonsterConfigurator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/earthMonster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/earthMonster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/fireMonster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/fireMonster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/monster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/monster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/monsterFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/monsterConfiguratorFactory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/waterMonster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/waterMonster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/windMonster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/windMonster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/GComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GComponent.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,73 +59,63 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/background/fireDrawer.js">
+        <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="675">
+              <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/background/index.html">
+        <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/Constants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/viewModelLocator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state relative-caret-position="600">
+              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
               <folding>
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="732">
+              <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/background/backGroundComponent.js">
+        <entry file="file://$PROJECT_DIR$/src/components/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+            <state relative-caret-position="210">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/app/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="107" selection-start-line="12" selection-start-column="107" selection-end-line="12" selection-end-column="107" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/app/index.html">
+        <entry file="file://$PROJECT_DIR$/src/components/fieldViewModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/monsterFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="75">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -108,36 +134,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>s</find>
-      <find>g-form</find>
-      <find>range</find>
-      <find>backGroundComponent</find>
-      <find>value</find>
-      <find>this</find>
-      <find>color</find>
-      <find>babel</find>
-      <find>notIs</find>
-      <find>g-element</find>
-      <find>notIsDrawing</find>
-      <find>not</find>
-      <find>maxLegs</find>
-      <find>arms</find>
-      <find>max</find>
-      <find>water</find>
-      <find>coat</find>
-      <find>setType</find>
-      <find>legs</find>
-      <find>maxle</find>
-      <find>g-grid</find>
+      <find>save</find>
       <find>c</find>
-      <find>settime</find>
-      <find>initColor</find>
-      <find>backbu</find>
-      <find>numpi</find>
-      <find>fireima</find>
-      <find>canva</find>
-      <find>context</find>
-      <find>new</find>
+      <find>placeMon</find>
+      <find>mo</find>
+      <find>z-in</find>
+      <find>armt</find>
+      <find>armType</find>
+      <find>arm</find>
+      <find>canSwim</find>
+      <find>cur</find>
+      <find>monsterda</find>
+      <find>wid</find>
+      <find>mons</find>
+      <find>co</find>
+      <find>monster</find>
+      <find>conso</find>
+      <find>g-mode</find>
+      <find>armty</find>
+      <find>contex</find>
+      <find>console.l</find>
+      <find>image</find>
+      <find>console.lo</find>
+      <find>g-element</find>
+      <find>clicks</find>
+      <find>g-grid</find>
+      <find>Particle</find>
+      <find>name</find>
+      <find>containsMonster</find>
+      <find>observab</find>
+      <find>fieldViewModel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,63 +172,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/utils/register.js" />
-        <option value="$PROJECT_DIR$/src/components/grid-element/gridComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/componentModule.js" />
-        <option value="$PROJECT_DIR$/src/components/grid-element/gridComponent.html" />
-        <option value="$PROJECT_DIR$/src/components/grid/gridComponent.html" />
-        <option value="$PROJECT_DIR$/src/components/app/index.css" />
-        <option value="$PROJECT_DIR$/src/utils/SopedComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/gridElementVM.js" />
-        <option value="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" />
-        <option value="$PROJECT_DIR$/src/domain/field.js" />
-        <option value="$PROJECT_DIR$/src/components/grid/gridComponent.css" />
-        <option value="$PROJECT_DIR$/src/components/grid/gridComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" />
-        <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.js" />
-        <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.html" />
-        <option value="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html" />
-        <option value="$PROJECT_DIR$/src/utils/htmlHelpers.js" />
-        <option value="$PROJECT_DIR$/src/components/form/monsterForm.js" />
-        <option value="$PROJECT_DIR$/src/domain/Monster.js" />
-        <option value="$PROJECT_DIR$/src/domain/windMonster2.js" />
-        <option value="$PROJECT_DIR$/src/domain/waterMonsterConfigurator.js" />
-        <option value="$PROJECT_DIR$/src/domain/earthMonsterConfigurator.js" />
-        <option value="$PROJECT_DIR$/src/domain/monsterFactory.js" />
-        <option value="$PROJECT_DIR$/src/domain/windMonsterConfigurator.js" />
         <option value="$PROJECT_DIR$/src/domain/fireMonsterConfigurator.js" />
         <option value="$PROJECT_DIR$/src/domain/monsterConfigurator.js" />
         <option value="$PROJECT_DIR$/src/domain/monsterType.js" />
-        <option value="$PROJECT_DIR$/src/domain/configurators/monsterConfiguratorStateHolder.js" />
-        <option value="$PROJECT_DIR$/src/utils/GComponent.js" />
-        <option value="$PROJECT_DIR$/src/domain/waterMonster.js" />
-        <option value="$PROJECT_DIR$/src/domain/configurators/waterMonsterConfigurator.js" />
-        <option value="$PROJECT_DIR$/src/domain/configurators/windMonsterConfigurator.js" />
-        <option value="$PROJECT_DIR$/src/domain/monster.js" />
-        <option value="$PROJECT_DIR$/src/domain/windMonster.js" />
-        <option value="$PROJECT_DIR$/src/domain/fireMonster.js" />
         <option value="$PROJECT_DIR$/src/domain/configurators/fireMonsterConfigurator.js" />
-        <option value="$PROJECT_DIR$/src/components/form/monsterForm.html" />
-        <option value="$PROJECT_DIR$/src/domain/configurators/earthMonsterConfigurator.js" />
-        <option value="$PROJECT_DIR$/src/domain/earthMonster.js" />
-        <option value="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" />
         <option value="$PROJECT_DIR$/src/utils/logicHelpers.js" />
-        <option value="$PROJECT_DIR$/src/domain/configurators/monsterConfigurator.js" />
         <option value="$PROJECT_DIR$/src/components/backgroundViewModel.js" />
-        <option value="$PROJECT_DIR$/src/components/viewModelLocator.js" />
-        <option value="$PROJECT_DIR$/src/components/app/index.js" />
-        <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.css" />
         <option value="$PROJECT_DIR$/src/components/background/index.css" />
         <option value="$PROJECT_DIR$/src/components/background/index.html" />
         <option value="$PROJECT_DIR$/src/components/background/fireDrawer.js" />
-        <option value="$PROJECT_DIR$/src/components/app/index.html" />
         <option value="$PROJECT_DIR$/src/components/background/backGroundComponent.js" />
+        <option value="$PROJECT_DIR$/src/utils/Constants.js" />
+        <option value="$PROJECT_DIR$/src/domain/configurators/monsterParser.js" />
+        <option value="$PROJECT_DIR$/src/domain/fireMonster.js" />
+        <option value="$PROJECT_DIR$/src/domain/configurators/earthMonsterConfigurator.js" />
+        <option value="$PROJECT_DIR$/src/domain/earthMonster.js" />
+        <option value="$PROJECT_DIR$/src/domain/configurators/windMonsterConfigurator.js" />
+        <option value="$PROJECT_DIR$/src/domain/windMonster.js" />
+        <option value="$PROJECT_DIR$/src/domain/configurators/waterMonsterConfigurator.js" />
+        <option value="$PROJECT_DIR$/src/domain/configurators/monsterConfiguratorStateHolder.js" />
+        <option value="$PROJECT_DIR$/src/utils/htmlHelpers.js" />
+        <option value="$PROJECT_DIR$/src/components/form/monsterForm.js" />
+        <option value="$PROJECT_DIR$/src/domain/waterMonster.js" />
+        <option value="$PROJECT_DIR$/src/domain/configurators/monsterConfigurator.js" />
+        <option value="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" />
+        <option value="$PROJECT_DIR$/src/components/app/index.js" />
+        <option value="$PROJECT_DIR$/src/components/grid/gridComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/incinarator/incinaratorVM.js" />
+        <option value="$PROJECT_DIR$/src/domain/monster.js" />
+        <option value="$PROJECT_DIR$/src/domain/configurators/monsterBindable.js" />
+        <option value="$PROJECT_DIR$/src/components/form/monsterForm.html" />
+        <option value="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html" />
+        <option value="$PROJECT_DIR$/src/components/monster/monster.js" />
+        <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.html" />
+        <option value="$PROJECT_DIR$/src/components/componentModule.js" />
+        <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.js" />
+        <option value="$PROJECT_DIR$/src/components/monster/monster.html" />
+        <option value="$PROJECT_DIR$/src/components/app/index.css" />
+        <option value="$PROJECT_DIR$/src/components/grid/gridComponent.css" />
+        <option value="$PROJECT_DIR$/src/components/monster/monster.css" />
+        <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.css" />
+        <option value="$PROJECT_DIR$/src/components/incinarator/incinarator.html" />
+        <option value="$PROJECT_DIR$/src/components/incinarator/incinarator.css" />
+        <option value="$PROJECT_DIR$/src/components/incinarator/incinarator.js" />
+        <option value="$PROJECT_DIR$/src/domain/configurators/monsterDao.js" />
+        <option value="$PROJECT_DIR$/src/components/monster/monsterElement.js" />
+        <option value="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" />
+        <option value="$PROJECT_DIR$/src/utils/GComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/viewModelLocator.js" />
+        <option value="$PROJECT_DIR$/src/components/fieldViewModel.js" />
+        <option value="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" />
+        <option value="$PROJECT_DIR$/src/components/app/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="702" />
-    <option name="width" value="964" />
+    <option name="x" value="713" />
+    <option name="width" value="673" />
     <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -211,13 +237,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
               <item name="webs3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webs3" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
@@ -236,13 +266,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webs3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="background" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
@@ -269,14 +292,15 @@
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
               <item name="webs3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="incinarator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
               <item name="webs3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="configurators" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="monster" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
@@ -284,16 +308,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="externalStyles" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webs3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,7 +320,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="javascript.nodejs.core.library.configured.version" value="11.15.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -317,9 +337,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dist" />
+      <recent name="$PROJECT_DIR$/src/components/monster" />
+      <recent name="$PROJECT_DIR$/src/components/incinarator" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/monsterDrawPane" />
-      <recent name="$PROJECT_DIR$/src/components/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/domain/configurators" />
@@ -413,6 +435,13 @@
       <workItem from="1559119138867" duration="7224000" />
       <workItem from="1559340405542" duration="5086000" />
       <workItem from="1559496573625" duration="1971000" />
+      <workItem from="1560441204415" duration="4541000" />
+      <workItem from="1560467864523" duration="6144000" />
+      <workItem from="1560496153140" duration="946000" />
+      <workItem from="1560590126698" duration="21368000" />
+      <workItem from="1560681097706" duration="597000" />
+      <workItem from="1560706682001" duration="391000" />
+      <workItem from="1560797216015" duration="17330000" />
     </task>
     <task id="LOCAL-00001" summary="stuff">
       <created>1558981983231</created>
@@ -425,7 +454,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120890000" />
+    <option name="totallyTimeSpent" value="172383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,24 +466,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1928" height="1039" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1035" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48355263" visible="true" weight="0.35002637" />
-      <window_info id="Structure" order="1" sideWeight="0.51644737" side_tool="true" weight="0.18608329" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4768" visible="true" weight="0.12018977" />
+      <window_info id="Structure" order="1" sideWeight="0.5232" side_tool="true" weight="0.244373" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32745314" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49732047" visible="true" weight="0.33225808" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49973643" weight="0.32745314" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49303323" weight="0.34068358" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994641" weight="0.4090408" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4994641" weight="0.32893288" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.33627343" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49732047" weight="0.31185362" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026795" side_tool="true" weight="0.33554816" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49624866" weight="0.3109151" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50375134" side_tool="true" weight="0.3109151" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3296582" />
       <window_info anchor="bottom" id="GraphQL" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -462,21 +491,23 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48355263" visible="true" weight="0.18608329" />
-      <window_info id="Structure" order="1" sideWeight="0.51644737" side_tool="true" visible="true" weight="0.18608329" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4768" visible="true" weight="0.35076922" />
+      <window_info id="Structure" order="1" sideWeight="0.5232" side_tool="true" weight="0.244373" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" visible="true" weight="0.3296582" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32745314" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49732047" weight="0.33296582" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39933994" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.4994641" weight="0.32893288" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49732047" weight="0.31229237" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026795" side_tool="true" weight="0.33554816" />
+      <window_info id="npm" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49973643" weight="0.32745314" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49303323" weight="0.34068358" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994641" weight="0.4090408" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4994641" weight="0.32893288" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.33627343" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49624866" weight="0.3109151" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50375134" side_tool="true" weight="0.3109151" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3296582" />
+      <window_info anchor="bottom" id="GraphQL" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -540,233 +571,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="stuff" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/externalStyles/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterConfiguratorVM.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.prettierrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="847">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/field.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/componentModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElementVM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html">
+    <entry file="file://$PROJECT_DIR$/src/domain/configurators/fireMonsterConfigurator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/viewModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/htmlHelpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/windMonster2.js" />
-    <entry file="file://$PROJECT_DIR$/src/domain/monsterFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/monsterType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/GComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="108" column="61" selection-start-line="108" selection-start-column="61" selection-end-line="108" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/configurators/monsterConfiguratorStateHolder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/configurators/windMonsterConfigurator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="195">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/earthMonster.js">
+    <entry file="file://$PROJECT_DIR$/src/domain/fireMonster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/logicHelpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/monster.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/configurators/fireMonsterConfigurator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-          <folding>
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/configurators/earthMonsterConfigurator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+        <state relative-caret-position="165">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
             <element signature="e#287#288#0" expanded="true" />
@@ -779,62 +618,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/fireMonster.js">
+    <entry file="file://$PROJECT_DIR$/src/domain/earthMonster.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/windMonster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="274">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="14" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/viewModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/configurators/monsterConfiguratorStateHolder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/configurators/waterMonsterConfigurator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" selection-start-line="18" selection-end-line="21" />
+        <state relative-caret-position="270">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/externalStyles/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/waterMonster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="20" />
+        <state relative-caret-position="45">
+          <caret line="3" column="46" lean-forward="true" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js">
+    <entry file="file://$PROJECT_DIR$/src/utils/htmlHelpers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/background/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/background/backGroundComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/configurators/monsterBindable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="822">
+          <caret line="91" column="36" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+          <folding>
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1395#1396#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1499#1500#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/configurators/monsterConfigurator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="e#41#78#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/monster.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/incinarator/incinaratorVM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -846,129 +791,242 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElement.html">
+    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        <state relative-caret-position="30">
+          <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.js">
+    <entry file="file://$PROJECT_DIR$/src/components/componentModule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/app/index.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="105">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/goal.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/field.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/incinarator/incinarator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/incinarator/incinarator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElement.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/background/index.css">
+    <entry file="file://$PROJECT_DIR$/src/components/incinarator/incinarator.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="135">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/configurators/monsterConfigurator.js">
+    <entry file="file://$PROJECT_DIR$/src/components/monster/monster.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="89" column="37" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
-          <folding>
-            <element signature="e#41#78#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/configurators/monsterDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/components/monster/monster.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/background/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/background/fireDrawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/viewModelLocator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state relative-caret-position="675">
+          <caret line="45" column="41" lean-forward="true" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#0#69#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/monster/monsterVM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/GComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="88" column="68" selection-start-line="88" selection-start-column="68" selection-end-line="88" selection-end-column="68" />
+          <folding>
+            <element signature="e#2465#2466#0" expanded="true" />
+            <element signature="e#2531#2532#0" expanded="true" />
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3177#3178#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/monster/monsterElement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElementVM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/fieldViewModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/app/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="107" selection-start-line="12" selection-start-column="107" selection-end-line="12" selection-end-column="107" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/background/backGroundComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
         </state>
       </provider>
     </entry>

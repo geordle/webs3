@@ -19,6 +19,17 @@ export class MonsterDrawPane extends GComponent {
         });
         this.triggerRefetch();
         this.createDrawableCanvas();
+        this.observe("reset", (isReset) => {
+            if (isReset) {
+                let htmlCanvasElement = this.root.querySelector("canvas");
+                htmlCanvasElement.getContext("2d").clearRect(0, 0, htmlCanvasElement.width, htmlCanvasElement.height);
+                this._vm.reset = false;
+            }
+        });
+
+        this.observe('image', _ => {
+            this.redraw();
+        })
     }
 
     static register() {
@@ -26,72 +37,74 @@ export class MonsterDrawPane extends GComponent {
     }
 
     createDrawableCanvas() {
-        let htmlCanvasElement = this.root.querySelector("canvas");
+        const htmlCanvasElement = this.root.querySelector("canvas");
         let paint;
         const self = this;
-        const context = htmlCanvasElement.getContext("2d");
-        const clicks = [];
+        this.context = htmlCanvasElement.getContext("2d");
 
         function addClick(x, y) {
             if (x && y) {
-                clicks.push([x - this.offsetLeft - 40, y - this.offsetTop - 52]);
+                self._vm.image.push([x - this.offsetLeft - 40, y - this.offsetTop - 52]);
             } else {
-                clicks.push([]);
+                self._vm.image.push([]);
             }
         }
 
-        function redraw() {
-            context.clearRect(
-                0,
-                0,
-                context.canvas.width,
-                context.canvas.height,
-            );
-            context.strokeStyle = "#070201";
-            context.lineJoin = "round";
-            context.lineWidth = 3;
 
-            let prevPoint = clicks[0];
-            for (const click of clicks) {
-                context.beginPath();
-                if (prevPoint.length === 0) {
-                    context.moveTo(click[0], click[1]);
-                } else {
-                    context.moveTo(prevPoint[0], prevPoint[1]);
-                }
-                context.lineTo(click[0], click[1]);
-                context.closePath();
-                context.stroke();
-                prevPoint = click;
-            }
-        }
-
-        htmlCanvasElement.addEventListener("mousedown", function({
-                                                                     pageX,
-                                                                     pageY,
-                                                                 }) {
+        htmlCanvasElement.addEventListener("mousedown", ({
+                                                             pageX,
+                                                             pageY,
+                                                         }) => {
             if (!self._vm.isEditing) {
                 paint = true;
                 addClick.call(this, pageX, pageY);
-                redraw();
+                this.redraw();
             }
         });
-        htmlCanvasElement.addEventListener("mousemove", function({
-                                                                     pageX,
-                                                                     pageY,
-                                                                 }) {
+        htmlCanvasElement.addEventListener("mousemove", ({
+                                                             pageX,
+                                                             pageY,
+                                                         }) => {
             if (paint) {
                 addClick.call(this, pageX, pageY);
-                redraw();
+                this.redraw();
             }
         });
 
-        function listener(_) {
+        function stopDraw(_) {
             paint = false;
             addClick(null, null);
         };
 
-        htmlCanvasElement.addEventListener("mouseup", listener);
-        htmlCanvasElement.addEventListener("mouseleave", listener);
+        htmlCanvasElement.addEventListener("mouseup", () => stopDraw());
+        htmlCanvasElement.addEventListener("mouseleave", () => stopDraw());
+        this.redraw();
+
+    }
+
+    redraw() {
+        this.context.clearRect(
+            0,
+            0,
+            this.context.canvas.width,
+            this.context.canvas.height,
+        );
+        this.context.strokeStyle = "#070201";
+        this.context.lineJoin = "round";
+        this.context.lineWidth = 3;
+
+        let prevPoint = this._vm.image[0];
+        for (const click of this._vm.image) {
+            this.context.beginPath();
+            if (prevPoint.length === 0) {
+                this.context.moveTo(click[0], click[1]);
+            } else {
+                this.context.moveTo(prevPoint[0], prevPoint[1]);
+            }
+            this.context.lineTo(click[0], click[1]);
+            this.context.closePath();
+            this.context.stroke();
+            prevPoint = click;
+        }
     }
 }

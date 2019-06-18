@@ -6,7 +6,7 @@ export class EarthMonsterConfigurator extends MonsterConfigurator{
 
 
     /**
-     * @param {Monster} value
+     * @param {MonsterElement} value
      * */
     set monster(value){
         this._monster = new EarthMonster(value);
@@ -14,7 +14,6 @@ export class EarthMonsterConfigurator extends MonsterConfigurator{
 
 
     maxArms = 2;
-    armType = ["Claws"];
     legSteps = 2;
     armTypes = ["Claws"];
     furTypes = ["Scales", "Hair", "Slime"];

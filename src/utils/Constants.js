@@ -1,5 +1,6 @@
 const StoragePrefix = {
-    MONSTER_PREFIX: 'monster'
+    MONSTER_PREFIX: 'monster',
+    LOCATION_PREFIX: 'loc'
 };
 
 

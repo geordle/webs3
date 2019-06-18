@@ -35,9 +35,28 @@ export class GComponent extends HTMLElement {
 
     _bindEventHandlers(htmlDivElement) {
         htmlDivElement.querySelectorAll("[g-on]").forEach(value => {
-            const [event, method] = value.getAttribute("g-on").split(":");
+            value.getAttribute("g-on").split(",").forEach(value1 => {
+                const [event, method] = value1.split(":");
+                value.addEventListener(event, arg => this._vm[method](arg));
+            });
 
-            value.addEventListener(event, arg => this._vm[method](arg));
+        });
+    }
+
+    _bindPropBinding(htmlDivElement) {
+        htmlDivElement.querySelectorAll("[g-bind]").forEach(value => {
+            value.getAttribute("g-bind").split(",").forEach((binding) => {
+                const [prop, boundField] = binding.split(":");
+
+                this.observe(boundField, newValue => {
+                    if (newValue || Number.isInteger(newValue)) {
+                        value[prop] = newValue;
+                    } else {
+                        delete value.removeAttribute(prop);
+                    }
+                });
+
+            });
         });
     }
 
@@ -98,23 +117,6 @@ export class GComponent extends HTMLElement {
             },
             ...value,
         ]);
-    }
-
-    _bindPropBinding(htmlDivElement) {
-        htmlDivElement.querySelectorAll("[g-bind]").forEach(value => {
-            value.getAttribute("g-bind").split(",").forEach((binding) => {
-                const [prop, boundField] = binding.split(":");
-
-                this.observe(boundField, newValue => {
-                    if (newValue || Number.isInteger(newValue)) {
-                        value[prop] = newValue;
-                    } else {
-                        delete value.removeAttribute(prop);
-                    }
-                });
-
-            });
-        });
     }
 
 

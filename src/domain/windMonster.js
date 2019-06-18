@@ -2,29 +2,36 @@ import { Monster } from "./monster";
 import { MonsterType } from "./monsterType";
 
 
-export class WindMonster extends Monster{
+export class WindMonster extends Monster {
 
 
     /**
      * @param {Monster} original
      * */
-    constructor(original){
+    constructor(original) {
         super(MonsterType.EARTH, original);
+        this.color = this.color || "Blue";
+        this.eyes = this.eyes || 2;
+        this._arms = this._arms || 2;
+        this.fur = this.fur || "Scales";
+        this.armType = this.armType || "Wings";
     }
 
-    fur = "Scales";
-    canFly = false;
-    canSwim = true;
-    color = "Blue";
-    eyes = 2;
 
-    _arms = 2;
+    get canFly() {
+        return true;
+    }
 
-    set arms(value){
+    get canSwim() {
+        return this.fur === "Scales" || this.fur === "Hair";
+    }
+
+
+    set arms(value) {
         this._arms = 2;
     }
 
-    get arms(){
+    get arms() {
         return this._arms;
     }
 }

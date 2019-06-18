@@ -20,7 +20,6 @@ export class BackGroundComponent extends GComponent {
     }
 
     drawBackground(){
-        console.log(this.canvaDrawer);
         if (this.canvaDrawer) {
             this.canvaDrawer.draw();
         }

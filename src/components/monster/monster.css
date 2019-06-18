@@ -1,0 +1,38 @@
+.monster {
+    height: 100%;
+    cursor: grab;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+.monster + .stats{
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    width: 170px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    z-index: 1;
+    position:relative;
+    bottom: 350%;
+    left: 35%;
+    margin-left: -60px;
+}
+
+
+.monster + .stats::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.monster:hover:not(:active) + .stats{
+    visibility: visible;
+}

@@ -5,14 +5,14 @@ export class Monster {
     uuid;
     _arms = 0;
     name = "";
-    fur = "";
-    armType = "";
+    fur;
+    armType;
     eyes = 0;
-    color = "";
+    color;
     legs = 0;
     discriminator;
 
-
+    image = [];
     get arms() {
         return this._arms;
     }
@@ -20,9 +20,11 @@ export class Monster {
         return this._arms =value;
     }
 
-
+    power = 0;
 
     constructor(discriminator, original) {
+        this.discriminator = discriminator;
+
         if(original && original.uuid && original.discriminator === discriminator){
             Object.assign(this, original);
         }

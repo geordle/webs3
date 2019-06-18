@@ -1,13 +1,8 @@
 import { MonsterConfiguratorVM } from "./form/monsterConfiguratorVM";
 import { GridElementVM } from "./grid-element/gridElementVM";
-import { BackgroundViewModel } from "./backgroundViewModel";
 import { MonsterConfiguratorStateHolder } from "../domain/configurators/monsterConfiguratorStateHolder";
-
-class FieldViewModel {
-    constructor() {
-        this.fieldtype ="water";
-    }
-}
+import { FieldViewModel } from "./fieldViewModel";
+import { IncinaratorVM } from "./incinarator/incinaratorVM";
 
 export class ViewModelLocator {
     constructor() {
@@ -15,9 +10,17 @@ export class ViewModelLocator {
         this._registerSingleton(MonsterConfiguratorVM, "monsterConfigurator");
         this._registerSingleton(MonsterConfiguratorStateHolder, "monsterConfiguratorStateHolder");
         this._registerSingleton(FieldViewModel, "fieldViewModel");
+        this._registerSingleton(IncinaratorVM, 'incinaratorVm')
     }
 
+
+
     getGridElementViewModel(x, y, name) {
+        if(x===0, y===0, name===0){
+            return this.monsterConfigurator;
+        }
+
+
         const keyString = `${x},${y},${name}`;
         let vm = this._gridElementMap.get(keyString);
         if (!vm) {
@@ -39,6 +42,9 @@ export class ViewModelLocator {
         });
     }
 
+    clearField(){
+        this._gridElementMap = new Map();
+    }
     /**
      *
      * @returns {ViewModelLocator}

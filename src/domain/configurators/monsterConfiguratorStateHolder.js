@@ -3,6 +3,7 @@ import { WaterMonsterConfigurator } from "./waterMonsterConfigurator";
 import { FireMonsterConfigurator } from "./fireMonsterConfigurator";
 import { EarthMonsterConfigurator } from "./earthMonsterConfigurator";
 import { WindMonsterConfigurator } from "./windMonsterConfigurator";
+import { Monster } from "../monster";
 
 
 export class MonsterConfiguratorStateHolder {
@@ -24,7 +25,19 @@ export class MonsterConfiguratorStateHolder {
         this.type = type;
         const currentMonster = this.configurator.monster;
         this.configurator = this._configurators.get(type);
-        console.log(this.configurator);
         this.configurator.monster = currentMonster;
+    }
+
+
+    setMonster(monster) {
+
+        this.configurator.monster = monster;
+
+        this.setType(monster.discriminator);
+    }
+
+    reset(){
+        this.configurator = {};
+        this.setType(MonsterType.WATER);
     }
 }

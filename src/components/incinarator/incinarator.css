@@ -1,0 +1,13 @@
+
+.base {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#garbage{
+    height: 200px;
+    width: 200px;
+    fill: red;
+}
+

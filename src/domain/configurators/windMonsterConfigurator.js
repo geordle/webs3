@@ -5,14 +5,13 @@ import { WindMonster } from "../windMonster";
 export class WindMonsterConfigurator extends MonsterConfigurator {
 
     maxArms = 2;
-    armType = ["Wings", "Claw wings"];
 
     get maxLegs() {
         return 2;
     }
 
     /**
-     * @param {Monster} value
+     * @param {MonsterElement} value
      * */
     set monster(value){
         this._monster = new WindMonster(value);

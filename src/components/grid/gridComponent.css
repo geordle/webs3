@@ -1,6 +1,5 @@
 .panel{
-    border: 1px solid black;
-    margin: 5px;
+
 }
 
 g-form {
@@ -9,9 +8,14 @@ g-form {
 
 .base {
     position: absolute;
+    display: grid;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    width: 1000px;
+    height: 1000px;
 
-    height: 100%;
-    width: 100%;
 }
 
 div {
@@ -22,10 +26,10 @@ div {
 
 g-element {
     position: absolute;
-    width: 9.8%;
-    height: 9.8%;
+    height: 100px;
+    width: 100px;
     border: solid black 1px;
-    margin: 0.1%;
+
 }
 
 

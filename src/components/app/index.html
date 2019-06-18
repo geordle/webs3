@@ -2,14 +2,22 @@
     <div class="row h-100">
         <g-form class="h-100 col-2 panel"></g-form>
         <div class="col-9">
-            <select g-model="fieldtype" value="aaa">
+            <div id="field-select">
+                <select g-model="fieldtype" >
                 <option>water</option>
                 <option>fire</option>
                 <option>earth</option>
                 <option>wind</option>
             </select>
-            <div class="panel">
-                <g-grid></g-grid>
+            <button class="btn btn-primary" value="Jungle" g-on="click:changeTo">Jungle</button>
+                <button class="btn btn-primary" value="Sjahari" g-on="click:changeTo">Sjahari</button>
+                <button class="btn btn-primary" value="IcePole" g-on="click:changeTo">IcePole</button>
+                <span g-model="region"></span>
+            </div>
+
+            <div class="panel" id="grid-holder">
+                    <g-grid region="Jungle"></g-grid>
+                </div>
                 <g-background></g-background>
             </div>
 

@@ -23,17 +23,22 @@ export class MonsterForm extends GComponent {
         this.observe("monsterConfigurator", () => {
             const element = this.root.querySelector("#fur");
             setOptionsOfSelect(element, this._vm.furTypes);
+            this._vm.notifyPropertyChanged('fur');
+
         });
 
         this.observe("monsterConfigurator", () => {
             let element = this.root.querySelector("#color");
             setOptionsOfSelect(element, this._vm.colors);
+            this._vm.notifyPropertyChanged('color');
         });
+
 
 
         this.observe("monsterConfigurator", () => {
             let element = this.root.querySelector("#arm-type");
             setOptionsOfSelect(element, this._vm.armTypes);
+            this._vm.notifyPropertyChanged('armType');
         });
         this.triggerRefetch();
     }

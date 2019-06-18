@@ -8,15 +8,25 @@ export default class EarthMonster extends Monster{
      * */
     constructor(original){
         super(MonsterType.EARTH, original);
+        this.fur = this.fur || "Scales";
+        this.color = this.color || "Purple";
+        this.eyes =  this.eyes ||2;
+        this._arms = this._arms || 2;
+        this.legs = this.legs || 2;
+        this.armType = this.armType || "Claws";
+
     }
 
-    fur = "Scales";
-    color = "Purple";
-    canFly = false;
-    canSwim = true;
-    eyes=2;
-    _arms = 2;
-    legs = 2;
+
+
+    get canFly(){
+        return false;
+    }
+
+    get canSwim(){
+        return true;
+    }
+
     set arms(value){
         this._arms = 2;
     }

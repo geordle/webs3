@@ -8,10 +8,21 @@ export class FireMonster extends Monster{
      * */
     constructor(original){
         super(MonsterType.FIRE, original);
+        this.fur = this.fur || "Scales";
+        this.color = this.fur || "Red";
+        this.legs = this.legs || 2;
+        this.armType = this.armType || "Tentacles";
     }
 
-    fur = "Scales";
-    color = "Red";
+
+
+    get canSwim(){
+        return false;
+    }
+
+    get canFly(){
+        return this.fur === "Feathers";
+    }
 
     set arms(val) {
         this._arms = val;
@@ -28,7 +39,6 @@ export class FireMonster extends Monster{
 
 
 
-    legs = 2;
 
 }
 

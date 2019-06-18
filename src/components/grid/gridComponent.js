@@ -8,7 +8,7 @@ import { createElementFromHTML } from "../../utils/htmlHelpers";
 export class GridComponent extends GComponent {
     constructor() {
         super({ css, html, isScoped: true, styleSheets: [bootstrapCss] });
-
+        this.regionName = this.getAttribute('region');
         this.generateSquares();
 
     }
@@ -19,13 +19,12 @@ export class GridComponent extends GComponent {
 
 
     generateSquares() {
-        const {grid, name} = field[0];
-        field[0].grid.forEach((row, rowIndex) => {
+        const {grid, name}= field.find(({name}) => name === this.regionName);
+        grid.forEach((row, rowIndex) => {
             row.Columns.forEach((el, columnIndex) => {
                 let node = createElementFromHTML(`<g-element ${el === "1" ? 'is-rock': ''}   x-pos="${row.name}" y-pos="${columnIndex}" region-name="${name}"></g-element>`);
                 node.style.left= `${columnIndex * 10 }%`;
                 node.style.top = `${rowIndex * 10 }%`;
-
                 this.root.querySelector('.base').appendChild(node);
             })
 
