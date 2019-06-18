@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7146134c-595c-4e44-a62f-b29bfd9801b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/weather.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/WeatherService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fieldViewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fieldViewModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/monster/monster.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monster/monster.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/monster/monster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monster/monster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/monster/monsterElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monster/monsterElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewModelLocator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewModelLocator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/configurators/monsterBindable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/configurators/monsterBindable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/earthMonster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/earthMonster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/fireMonster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/fireMonster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/monster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/monster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/waterMonster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/waterMonster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/windMonster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/windMonster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/viewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/viewModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="7146134c-595c-4e44-a62f-b29bfd9801b7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -87,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/domain/windMonster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+            <state relative-caret-position="345">
+              <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
                 <element signature="e#483#484#0" expanded="true" />
@@ -428,7 +405,7 @@
       <workItem from="1560681097706" duration="597000" />
       <workItem from="1560706682001" duration="391000" />
       <workItem from="1560797216015" duration="17491000" />
-      <workItem from="1560845023610" duration="9630000" />
+      <workItem from="1560845023610" duration="9782000" />
     </task>
     <task id="LOCAL-00001" summary="stuff">
       <created>1558981983231</created>
@@ -441,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182174000" />
+    <option name="totallyTimeSpent" value="182326000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,7 +439,7 @@
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49973643" weight="0.32745314" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49303323" visible="true" weight="0.34068358" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49303323" weight="0.34068358" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994641" weight="0.4090408" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1026,8 +1003,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/windMonster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        <state relative-caret-position="345">
+          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
             <element signature="e#483#484#0" expanded="true" />
