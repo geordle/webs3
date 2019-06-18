@@ -1,4 +1,5 @@
 import { MonsterType } from "./monsterType";
+import { weather } from "../components/weather";
 
 export class Monster {
 
@@ -13,6 +14,7 @@ export class Monster {
     discriminator;
 
     image = [];
+    _power = 0;
     get arms() {
         return this._arms;
     }
@@ -20,7 +22,17 @@ export class Monster {
         return this._arms =value;
     }
 
-    power = 0;
+    get power(){
+        return this._power;
+    }
+
+    set power(value){
+        this._power = value;
+    }
+
+    get canDoSpecial(){
+        return this.power >= 8;
+    }
 
     constructor(discriminator, original) {
         this.discriminator = discriminator;
@@ -29,10 +41,15 @@ export class Monster {
             Object.assign(this, original);
         }
         else if(original){
+            this.image = original.image;
             this.uuid = original.uuid;
             this.name = original.name;
         }
     }
 
+
+    get actualPower(){
+        return this.power;
+    }
 
 }

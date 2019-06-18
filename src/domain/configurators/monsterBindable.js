@@ -76,6 +76,10 @@ export class MonsterBindable extends ViewModel{
         return this._monster;
     };
 
+    get actualPower(){
+        return this._monster.actualPower;
+    }
+
     get canSwim() {
         return this._monster.canSwim;
     }
@@ -90,6 +94,10 @@ export class MonsterBindable extends ViewModel{
 
     set power(value){
         this._monster.power = value;
+    }
+
+    get canDoSpecial(){
+        return this._monster.canDoSpecial;
     }
 
 }

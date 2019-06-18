@@ -44,7 +44,6 @@ export class GridElementVM extends MonsterBindable {
 
     neighborDropped() {
         this.shouldPerformAction = true;
-        console.log(this);
         this.notifyPropertyChanged('shouldPerformAction');
     }
 
@@ -58,8 +57,6 @@ export class GridElementVM extends MonsterBindable {
         const rowNumber = Number.parseInt(_x.replace(/^\D*/g, ''))
         const y = Number.parseInt(_y);
         this._monster = MonsterDao.getInstance().moveMonster({ region: _regionName, x: _x, y: _y }, origin);
-        console.log({ region: _regionName, x: _x, y: _y });
-        console.log("Row" + (rowNumber), y + 1, _regionName);
         ViewModelLocator.getInstance().getGridElementViewModel("Row" +(rowNumber + 1), y, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber - 1), y, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber), y + 1, _regionName).neighborDropped();

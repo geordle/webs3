@@ -14,6 +14,9 @@ export class ViewModelLocator {
     }
 
 
+    getAllGridElementViewModels(){
+        return [...this._gridElementMap.values()].flat();
+    }
 
     getGridElementViewModel(x, y, name) {
         if(x===0, y===0, name===0){

@@ -1,5 +1,6 @@
 import {Monster} from "./monster";
 import { MonsterType } from "./monsterType";
+import { weather } from "../components/weather";
 
 export default class WaterMonster extends Monster {
 
@@ -24,6 +25,10 @@ export default class WaterMonster extends Monster {
         this.armType  = this.armType  || "Tentacles";
     }
 
+    get actualPower(){
+        const multiplier = weather.fieldType === "Rain"? 1.1 : 1;
+        return (super.power * multiplier).toFixed(2);
+    }
 
     get arms() {
         return this._arms;

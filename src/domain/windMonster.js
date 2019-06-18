@@ -1,5 +1,6 @@
 import { Monster } from "./monster";
 import { MonsterType } from "./monsterType";
+import { weather } from "../components/weather";
 
 
 export class WindMonster extends Monster {
@@ -15,6 +16,13 @@ export class WindMonster extends Monster {
         this._arms = this._arms || 2;
         this.fur = this.fur || "Scales";
         this.armType = this.armType || "Wings";
+    }
+
+
+
+    get actualPower(){
+        const multiplier = weather.fieldType === "Mist" ? 1.1 : 1;
+        return super.power * multiplier;
     }
 
 

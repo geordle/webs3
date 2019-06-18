@@ -13,7 +13,7 @@ export class MonsterConfiguratorVM extends ViewModel {
         this.isEditing = false;
         this.monsterConfiguratorStateHolder = ViewModelLocator.getInstance().monsterConfiguratorStateHolder;
         const monster = MonsterDao.getInstance().getMonsterByLocation({ region: 0, x: 0, y: 0 });
-        if(monster){
+        if (monster) {
             this.monsterConfiguratorStateHolder.setMonster(monster);
         }
 
@@ -25,7 +25,7 @@ export class MonsterConfiguratorVM extends ViewModel {
         this.drawButtonText = this.isEditing ? "draw" : "save";
     }
 
-    get hasExistingMonster(){
+    get hasExistingMonster() {
         return !!this.monsterConfigurator.uuid;
     }
 
@@ -38,7 +38,7 @@ export class MonsterConfiguratorVM extends ViewModel {
     }
 
     get cantSave() {
-        return  !this.monsterConfigurator.name || this.monsterConfigurator.name.length === 0;
+        return !this.monsterConfigurator.name || this.monsterConfigurator.name.length === 0;
     }
 
     get maxArms() {
@@ -48,6 +48,7 @@ export class MonsterConfiguratorVM extends ViewModel {
     get maxLegs() {
         return this.monsterConfigurator.maxLegs;
     }
+
     get minLegs() {
         return this.monsterConfigurator.minLegs;
     }
@@ -99,7 +100,7 @@ export class MonsterConfiguratorVM extends ViewModel {
         if (value.length < 10) {
             this.monsterConfigurator.name = value;
         }
-        this.notifyPropertyChanged('cantSave');
+        this.notifyPropertyChanged("cantSave");
     }
 
     set fur(value) {
@@ -130,25 +131,26 @@ export class MonsterConfiguratorVM extends ViewModel {
 
     onDragStart(event) {
         this.monsterConfigurator.save();
-        event.dataTransfer.setData("monsterConfigurator", JSON.stringify({x: 0,y:0,region:0}));
+        event.dataTransfer.setData("monsterConfigurator", JSON.stringify({ x: 0, y: 0, region: 0 }));
     }
 
-    get image(){
-       return  this.monsterConfigurator.image;
+    get image() {
+        return this.monsterConfigurator.image;
     }
-    set image(value){
+
+    set image(value) {
         this.monsterConfigurator.image = value;
     }
 
-    get monsterConfigurator(){
+    get monsterConfigurator() {
         return this.monsterConfiguratorStateHolder.configurator;
     }
 
-    get armType(){
-         return this.monsterConfigurator.armType;
+    get armType() {
+        return this.monsterConfigurator.armType;
     }
 
-    set armType(value){
+    set armType(value) {
         this.monsterConfigurator.armType = value;
     }
 
@@ -158,15 +160,15 @@ export class MonsterConfiguratorVM extends ViewModel {
         return this.monsterConfigurator.armTypes;
     }
 
-    get power(){
+    get power() {
         return this.monsterConfigurator.power;
     }
 
-    set power(value){
+    set power(value) {
         this.monsterConfigurator.power = value;
     }
 
-    update(){
+    update() {
         this.monsterConfiguratorStateHolder.reset();
         this.isEditing = false;
         this.reset = true;
@@ -183,19 +185,17 @@ export class MonsterConfiguratorVM extends ViewModel {
 
     onElementDropped(par) {
         const id = par.dataTransfer.getData("monsterConfigurator");
-        const origin= JSON.parse(id);
+        const origin = JSON.parse(id);
         try {
-            
-        const monster = MonsterDao.getInstance().moveMonster({ region: 0, x: 0, y: 0 }, origin);
-        this.monsterConfiguratorStateHolder.setMonster(monster);
-        this.switchIsDrawing();
-        this.notifyAllPropertyChanged();
+            const monster = MonsterDao.getInstance().moveMonster({ region: 0, x: 0, y: 0 }, origin);
+            this.monsterConfiguratorStateHolder.setMonster(monster);
+            this.switchIsDrawing();
+            this.notifyAllPropertyChanged();
         } catch (e) {
 
         }
-        
-    }
 
+    }
 
 
 }

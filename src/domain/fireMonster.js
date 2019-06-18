@@ -1,5 +1,6 @@
 import { Monster } from "./monster";
 import { MonsterType } from "./monsterType";
+import { weather } from "../components/weather";
 
 export class FireMonster extends Monster{
 
@@ -9,10 +10,16 @@ export class FireMonster extends Monster{
     constructor(original){
         super(MonsterType.FIRE, original);
         this.fur = this.fur || "Scales";
-        this.color = this.fur || "Red";
+        this.color = this.color || "Red";
         this.legs = this.legs || 2;
         this.armType = this.armType || "Tentacles";
     }
+
+    get actualPower(){
+        const multiplier = weather.fieldType === "Clear" ? 1.1 : 1;
+        return super.power * multiplier;
+    }
+
 
 
 

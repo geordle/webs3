@@ -33,7 +33,6 @@ export class MonsterElement extends GComponent {
         const {color} = this._vm;
 
         this.observe('shouldPerformAction', (should) => {
-            console.log(this._vm);
            if (should){
                this.jiggle(two, rect);
                this._vm.shouldPerformAction = false;

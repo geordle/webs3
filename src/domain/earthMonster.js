@@ -1,5 +1,6 @@
 import { MonsterType } from "./monsterType";
 import { Monster } from "./monster";
+import { weather } from "../components/weather";
 
 export default class EarthMonster extends Monster{
 
@@ -17,6 +18,10 @@ export default class EarthMonster extends Monster{
 
     }
 
+    get actualPower(){
+        const multiplier = weather.fieldType === "Snow" ? 1.1 : 1;
+        return super.power * multiplier;
+    }
 
 
     get canFly(){

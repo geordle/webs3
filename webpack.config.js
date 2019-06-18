@@ -2,10 +2,12 @@ const path = require("path");
 const webpack = require("webpack");
 const PrettierPlugin = require("prettier-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+require("babel-core/register");
+require("babel-polyfill");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: ['babel-polyfill',"./src/index.js"],
     mode: "development",
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -15,7 +17,7 @@ module.exports = {
         rules: [
             {
                 test: /\.m?js$/,
-                exclude: /(node_modules|bower_components|build)/,
+                exclude: /(node_modules|bower_components|build|dist)/,
                 use: {
                     loader: "babel-loader",
                     options: {

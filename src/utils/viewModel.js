@@ -12,7 +12,7 @@ export class ViewModel {
                         property
                     ).set;
                     if (setter) {
-                        setter.call(this, this[property]);
+                        setter.call({}, this[property]);
                     }
                 }
             }
