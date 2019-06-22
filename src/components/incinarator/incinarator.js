@@ -12,7 +12,7 @@ export class Incinarator extends GComponent {
             html,
             isScoped: true,
             styleSheets: [bootstrapCss],
-            vm: ViewModelLocator.getInstance().incinaratorVm,
+            vm: ViewModelLocator.getInstance().incinaratorVm
         });
         let rect;
         let rotationSpeed = 0.01;
@@ -38,6 +38,7 @@ export class Incinarator extends GComponent {
             }
 
         });
+
 
 
     }

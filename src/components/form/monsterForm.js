@@ -17,7 +17,8 @@ export class MonsterForm extends GComponent {
             html,
             isScoped: true,
             styleSheets: [bootstrapCss],
-            vm: ViewModelLocator.getInstance().monsterConfigurator,
+            vm: ViewModelLocator.getInstance().monsterConfigurator
+
         });
 
         this.observe("monsterConfigurator", () => {

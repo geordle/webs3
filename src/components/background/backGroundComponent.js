@@ -7,7 +7,7 @@ import { FireDrawer } from "./fireDrawer";
 export class BackGroundComponent extends GComponent {
 
     constructor() {
-        super({ css, html, isScoped: true, vm: ViewModelLocator.getInstance().fieldViewModel });
+        super({ css, html, isScoped: true,vm : ViewModelLocator.getInstance().fieldViewModel });
 
        this.canv = this.root.querySelector('#background');
         this.observe("fieldtype", () => {

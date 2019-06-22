@@ -10,10 +10,10 @@ import { ViewModelLocator } from "../viewModelLocator";
 export class AppComponent extends GComponent{
 
     constructor(){
-        super({ css, html, isScoped: true, styleSheets: [bootstrapCss], vm: ViewModelLocator.getInstance().fieldViewModel });
+        super({ css, html, isScoped: true, styleSheets: [bootstrapCss] , vm: ViewModelLocator.getInstance().fieldViewModel});
         this.observe('region', (region)=> {
             this.root.querySelector('#grid-holder').innerHTML= `<g-grid region="${region}"></g-grid>`;
-        })
+        });
     }
 
     static register(){

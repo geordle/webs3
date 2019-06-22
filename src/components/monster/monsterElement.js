@@ -7,7 +7,8 @@ import Two from "two.js";
 
 function colorToRgba(color) {
     switch (color) {
-        case "Blue":  return  "rgba(0,0,255,0)"
+        case "Blue":
+            return "rgba(0,0,255,0)";
     }
 }
 
@@ -20,40 +21,43 @@ export class MonsterElement extends GComponent {
             html,
             isScoped: true,
             styleSheets: [bootstrapCss],
-            vm,
+            vm
         });
         this.triggerRefetch();
 
-        var two = new Two({
+        this.two = new Two({
             width: 100,
             height: 100,
             autostart: true,
         }).appendTo(this.root.querySelector(".monster"));
 
-        const {color} = this._vm;
+        const { color } = this._vm;
 
-        this.observe('shouldPerformAction', (should) => {
-           if (should){
-               this.jiggle(two, rect);
-               this._vm.shouldPerformAction = false;
-           }
+
+        this.observe("shouldPerformAction", (should) => {
+            if (should) {
+                this.root.querySelector('.monster').click();
+            }
         });
-
-        const rect = two.makeRectangle(two.width / 2, two.height / 2, 50, 50);
-        rect.fill = color;
-
+        this.rect = this.two.makeRectangle(this.two.width / 2, this.two.height / 2, 50, 50);
+        this.rect.fill = color;
         this.root.querySelector(".monster").addEventListener("click", () => {
-            this.jiggle(two, rect);
-        });
+            this.isJiggeling = true;
 
+        });
+        this.two.bind('update', this.jiggle())
     }
 
 
-    jiggle(two, rect) {
+    jiggle() {
         let rotation = 0;
         let jiggleCount = 0;
         let direction = 0.1;
-        two.bind("update", function(frameCount) {
+        return  frameCount => {
+            if (!this.isJiggeling) {
+                return;
+            }
+
             if (jiggleCount < 3 || (rotation >= 0)) {
                 if (rotation > 0.5) {
                     jiggleCount++;
@@ -63,11 +67,14 @@ export class MonsterElement extends GComponent {
                     jiggleCount++;
                 }
                 rotation += direction;
-                rect.rotation = rotation;
+                this.rect.rotation = rotation;
             } else {
-                rect.rotation = 0;
+                this.rect.rotation = 0;
+                rotation = 0;
+                jiggleCount = 0;
+                this.isJiggeling = false;
             }
-        });
+        };
     }
 
     static register() {

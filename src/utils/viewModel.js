@@ -2,18 +2,11 @@ export class ViewModel {
     notifyPropertyChanged(...properties) {
         if (this && properties.every(value => value)) {
             for (const property of properties) {
-                const desciptor = Object.getOwnPropertyDescriptor(
-                    this,
-                    property
-                );
-                if (desciptor) {
-                    const setter = Object.getOwnPropertyDescriptor(
-                        this,
-                        property
-                    ).set;
-                    if (setter) {
-                        setter.call({}, this[property]);
-                    }
+                const observerProp = this[`__Observable_${property}`];
+                if(observerProp){
+                    observerProp.notifyAction();
+                } else {
+                    console.log(this);
                 }
             }
         }
@@ -21,7 +14,9 @@ export class ViewModel {
 
     notifyAllPropertyChanged(...except) {
         let ownPropertyDescriptors = Object.keys(Object.getOwnPropertyDescriptors(this))
-            .filter(value => except.indexOf(value) === -1);
+            .filter(value => except.indexOf(value) === -1)
+            .filter(value => !value.includes("__"))
+        ;
         this.notifyPropertyChanged(...ownPropertyDescriptors);
     }
 }

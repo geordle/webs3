@@ -3,11 +3,13 @@ export class Weather {
 
     set fieldType(value){
         switch (value) {
+            case "Clouds":
             case "Mist":
             case "Fog":
                 this._fieldType = "Mist";
                 break;
             case "Rain":
+            case "Drizzle":
                 this._fieldType = "Rain";
                 break;
             case "Clear":

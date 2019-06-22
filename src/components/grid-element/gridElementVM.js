@@ -48,6 +48,7 @@ export class GridElementVM extends MonsterBindable {
     }
 
     onElementDropped(par) {
+        
         const id = par.dataTransfer.getData("monsterConfigurator");
         const origin = JSON.parse(id);
         const { _x, _y, _regionName } = this;

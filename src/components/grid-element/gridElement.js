@@ -20,9 +20,12 @@ export class GridElement extends GComponent {
                 .classList.add('rock');
         }
         this._bindVm(gridElementViewModel);
-        this.triggerRefetch();
+        this.observe('containsMonster', (value)=> {
+            return this.updateMonster(value);
+        });
         this.updateMonster(this._vm.containsMonster);
-        this.observe('containsMonster', (value)=> this.updateMonster(value));
+        this.triggerRefetch();
+
     }
 
     updateMonster(containsMonster){

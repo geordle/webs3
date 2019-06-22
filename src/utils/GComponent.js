@@ -1,4 +1,5 @@
 import { changeElementContentAction } from "./htmlHelpers";
+import { Observable } from "./Observable";
 
 /**
  * @abstract
@@ -31,6 +32,9 @@ export class GComponent extends HTMLElement {
         this._bindEventHandlers(htmlDivElement);
         this._bindGModel(htmlDivElement);
         this._bindPropBinding(htmlDivElement);
+        [...this._modelMap.entries()].forEach(([prop, events]) => {
+            Observable.bindProp(this._vm, prop, ...events);
+        });
     }
 
     _bindEventHandlers(htmlDivElement) {
@@ -74,49 +78,13 @@ export class GComponent extends HTMLElement {
             });
             this._modelMap.set(property, [changeAction, ...(elements || [])]);
         });
-
-        for (const key of this._modelMap.keys()) {
-            this._bindField(key);
-        }
     }
 
-    _bindField(fieldName) {
-        let val = this._vm[fieldName];
-        let getter = () => val;
-        let setter = arg => (val = arg);
-        if (this._vm) {
-            getter = this._vm.__lookupGetter__(fieldName) || getter;
-            setter = this._vm.__lookupSetter__(fieldName) || setter;
-        }
-        Object.defineProperty(this._vm, fieldName, {
-            get: () => {
-                return getter.call(this._vm);
-            },
-            set: newValue => {
-                if (newValue !== undefined) {
-                    setter.call(this._vm, newValue);
-                }
-
-                for (const action of this._modelMap.get(fieldName)) {
-                    action(getter.call(this._vm));
-                }
-            },
-            configurable: true,
-        });
-    }
 
     observe(property, callback) {
-        let value = this._modelMap.get(property);
-        if (!value) {
-            this._bindField(property);
-            value = [];
-        }
-        this._modelMap.set(property, [
-            () => {
-                callback.call(this, this._vm[property]);
-            },
-            ...value,
-        ]);
+        Observable.bindProp(this._vm, property,() => {
+            callback.call(this, this._vm[property]);
+        });
     }
 
 
