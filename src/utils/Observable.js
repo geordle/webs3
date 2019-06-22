@@ -1,5 +1,7 @@
+import { getType } from "./classHelpers";
+
 export class Observable {
-    static bindProp(_vm, prop, ...events) {
+    static bindProp(_vm, origin, prop, ...events) {
         if (!_vm) {
             throw new Error("vm not entered");
         }
@@ -7,22 +9,31 @@ export class Observable {
         if (!ObservableElement) {
             this.defineObservable(ObservableElement, _vm, prop);
         }
-        _vm[`__Observable_${prop}`].events.push(...(events || []));
+        _vm[`__Observable_${prop}`].events.push([origin, (events || [])]);
     }
 
     static defineObservable(ObservableElement, _vm, prop) {
         let val = _vm[prop];
         let getter = () => val;
         let setter = arg => (val = arg);
-        const descriptor = Object.getOwnPropertyDescriptors(Object.getPrototypeOf(_vm))[prop];
+        let prototypeOf = Object.getPrototypeOf(_vm);
+
+        const descriptor = this.unwrapRecursive(_vm, prop);
+
         if (descriptor) {
+
             setter = descriptor.set;
             getter = descriptor.get;
         }
         const notifyAction = () => {
-            for (const action of _vm[`__Observable_${prop}`].events) {
-                action(getter.call(_vm));
+            const actions = _vm[`__Observable_${prop}`]
+                .events.flatMap(([key, val]) => val);
+            if (actions) {
+                for (const action of actions) {
+                    action(getter.call(_vm));
+                }
             }
+
         };
         Object.defineProperty(_vm, prop, {
             get: () => {
@@ -37,9 +48,32 @@ export class Observable {
             },
             configurable: false,
         });
-        _vm[`__Observable_${prop}`] = { events: [], notifyAction };
-        if(_vm[`__Observable_${prop}`].events.length > 10){
+        const notifyForObserver = (observer) => {
+            const actions = _vm[`__Observable_${prop}`]
+                .events
+                .filter(([key]) => key === observer)
+                .flatMap(([key, value]) => value);
+            if (actions) {
+                for (const action of actions) {
+                    action(getter.call(_vm));
+                }
+            }
+        };
+        _vm[`__Observable_${prop}`] = { events: [], notifyAction, notifyForObserver };
+        if (_vm[`__Observable_${prop}`].events.length > 10) {
             _vm[`__Observable_${prop}`].events.shift();
+        }
+    }
+
+    /* allows to recurse trhough proto chain untill prop is found*/
+    static unwrapRecursive(obj, prop) {
+        const descr = Object.getPrototypeOf(obj);
+        if (!descr) return null;
+        const propDesc = Object.getOwnPropertyDescriptor(descr, prop);
+        if (propDesc) {
+            return propDesc;
+        } else {
+            return this.unwrapRecursive(descr, prop);
         }
     }
 }

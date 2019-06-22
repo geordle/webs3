@@ -5,18 +5,25 @@ export class ViewModel {
                 const observerProp = this[`__Observable_${property}`];
                 if(observerProp){
                     observerProp.notifyAction();
-                } else {
-                    console.log(this);
                 }
             }
         }
     }
 
     notifyAllPropertyChanged(...except) {
-        let ownPropertyDescriptors = Object.keys(Object.getOwnPropertyDescriptors(this))
+        this.observableProps(except).forEach(value => value.notifyAction())
+    }
+
+
+    observableProps(...except){
+        return  Object.keys(Object.getOwnPropertyDescriptors(this))
             .filter(value => except.indexOf(value) === -1)
-            .filter(value => !value.includes("__"))
-        ;
-        this.notifyPropertyChanged(...ownPropertyDescriptors);
+            .filter(value => value.match(/^__Observable/))
+            .map(value => this[value])
+
+    }
+
+    notifyForObserver(observer){
+        this.observableProps().forEach(value => value.notifyForObserver(observer))
     }
 }

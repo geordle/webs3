@@ -12,9 +12,9 @@
                         <option value="Snow">Snow</option>
                     </select>
                 </label>
-                <button class="btn btn-primary" value="Jungle" g-on="click:changeTo">Jungle</button>
-                <button class="btn btn-primary" value="Sjahari" g-on="click:changeTo">Sjahari</button>
-                <button class="btn btn-primary" value="IcePole" g-on="click:changeTo">IcePole</button>
+                <button class="btn btn-primary" value="Jungle" g-on="click:changeTo,dragenter:changeTo">Jungle</button>
+                <button class="btn btn-primary" value="Sjahari" g-on="click:changeTo,dragenter:changeTo">Sjahari</button>
+                <button class="btn btn-primary" value="IcePole" g-on="click:changeTo,dragenter:changeTo">IcePole</button>
                 <span g-model="region"></span>
             </div>
             <div class="panel" id="grid-holder">

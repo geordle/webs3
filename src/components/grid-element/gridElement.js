@@ -25,7 +25,6 @@ export class GridElement extends GComponent {
         });
         this.updateMonster(this._vm.containsMonster);
         this.triggerRefetch();
-
     }
 
     updateMonster(containsMonster){

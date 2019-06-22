@@ -15,7 +15,7 @@ export class MonsterDrawPane extends GComponent {
             html,
             isScoped: true,
             styleSheets: [bootstrapCss],
-            vm: ViewModelLocator.getInstance().monsterConfigurator
+            vm: ViewModelLocator.getInstance().monsterConfigurator,
         });
         this.createDrawableCanvas();
         this.observe("reset", (isReset) => {
@@ -25,10 +25,9 @@ export class MonsterDrawPane extends GComponent {
                 this._vm.reset = false;
             }
         });
-        this.observe('image', _ => {
+        this.observe("image", _ => {
             this.redraw();
         });
-
         this.triggerRefetch();
     }
 

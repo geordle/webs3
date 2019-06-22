@@ -67,8 +67,11 @@ export class GridElementVM extends MonsterBindable {
 
 
     update() {
+
+
         const { _x, _y, _regionName } = this;
         this._monster = MonsterDao.getInstance().getMonsterByLocation({ region: _regionName, x: _x, y: _y }) || {};
+
         this.notifyAllPropertyChanged();
     }
 

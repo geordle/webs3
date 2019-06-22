@@ -33,7 +33,7 @@ export class GComponent extends HTMLElement {
         this._bindGModel(htmlDivElement);
         this._bindPropBinding(htmlDivElement);
         [...this._modelMap.entries()].forEach(([prop, events]) => {
-            Observable.bindProp(this._vm, prop, ...events);
+            Observable.bindProp(this._vm,this,  prop, ...events);
         });
     }
 
@@ -82,7 +82,7 @@ export class GComponent extends HTMLElement {
 
 
     observe(property, callback) {
-        Observable.bindProp(this._vm, property,() => {
+        Observable.bindProp(this._vm, this, property,() => {
             callback.call(this, this._vm[property]);
         });
     }
@@ -109,8 +109,6 @@ export class GComponent extends HTMLElement {
     }
 
     triggerRefetch() {
-        for (const entry of this._modelMap.values()) {
-            entry.forEach(action => action.call(this._vm));
-        }
+        this._vm.notifyForObserver(this);
     }
 }

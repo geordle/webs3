@@ -23,7 +23,6 @@ export class MonsterElement extends GComponent {
             styleSheets: [bootstrapCss],
             vm
         });
-        this.triggerRefetch();
 
         this.two = new Two({
             width: 100,
@@ -45,7 +44,8 @@ export class MonsterElement extends GComponent {
             this.isJiggeling = true;
 
         });
-        this.two.bind('update', this.jiggle())
+        this.two.bind('update', this.jiggle());
+        this.triggerRefetch();
     }
 
 
