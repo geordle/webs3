@@ -14,8 +14,8 @@ export class BackGroundComponent extends GComponent {
         super({ css, html, isScoped: true,vm : ViewModelLocator.getInstance().fieldViewModel });
 
        this.canv = this.root.querySelector('#background');
-        this.observe("fieldtype", () => {
-            this.startCanvas(this._vm.fieldtype); 
+        this.observe("fieldType", () => {
+            this.startCanvas(this._vm.fieldType);
         });
 
         window.requestAnimationFrame(time => {
@@ -36,16 +36,16 @@ export class BackGroundComponent extends GComponent {
 
     startCanvas(type) {
             switch(type){
-                case "fire":
+                case "Snow":
                     this.canvaDrawer = new FireDrawer(this.canv);
                     break;
-                case "rain":
+                case "Rain":
                     this.canvaDrawer = new RainDrawer(this.canv);
                     break;
-                case "earth":
+                case "Clear":
                     this.canvaDrawer = new EarthDrawer(this.canv);
                     break;
-                case "wind":
+                case "Mist":
                     this.canvaDrawer = new WindDrawer(this.canv);
                     break;
                 default:

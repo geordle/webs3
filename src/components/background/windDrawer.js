@@ -1,9 +1,9 @@
-export class windDrawer {
+export class WindDrawer {
 
     constructor(canvas) {
-        this.wind(canvas)
+        this.draw(canvas)
     }
-    wind(canvas) {
+    draw(canvas) {
         function draw() {
             ctx.clearRect(0, 0, w, h);
             for (let c = 0; c < particles.length; c++) {

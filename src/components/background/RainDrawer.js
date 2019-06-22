@@ -1,9 +1,9 @@
 export class RainDrawer {
 
     constructor(canvas) {
-        this.rain(canvas)
+        this.draw(canvas)
     }
-    rain(canvas) {
+    draw(canvas) {
         function draw() {
             ctx.clearRect(0, 0, w, h);
             for (let c = 0; c < particles.length; c++) {

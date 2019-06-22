@@ -1,17 +1,16 @@
-export class earthDrawer {
+export class EarthDrawer {
 
     constructor(canvas) {
-        this.earth(canvas)
+        this.CANVAS = canvas;
     }
-    earth(initcan) {
-        const canvas = initcan;
-        const ctx = canvas.getContext("2d");
+    draw() {
+        const ctx = this.CANVAS.getContext("2d");
 
         //full with height
         const W = window.innerWidth;
         const H = window.innerHeight;
-        canvas.width = W;
-        canvas.height = H;
+        this.CANVAS.width = W;
+        this.CANVAS.height = H;
 
         let length, divergence, reduction, line_width, start_points = [];
 
