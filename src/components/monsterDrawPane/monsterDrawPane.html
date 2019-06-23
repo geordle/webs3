@@ -1,3 +1,3 @@
-<canvas g-bind="draggable:isEditing"  g-on="drop:onElementDropped,dragover:onDragOver,dragstart:onDragStart"  height="200" width="200">
+<canvas g-bind="draggable:isEditing" class="grab" g-on="drop:onElementDropped,dragover:onDragOver,dragstart:onDragStart"  height="200" width="200">
 </canvas>
 <button  g-on="click:switchIsDrawing" g-bind="disabled:cantSave" class="btn-primary btn"><span g-model="drawButtonText"></span> </button>
