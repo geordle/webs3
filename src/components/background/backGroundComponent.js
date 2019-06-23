@@ -4,6 +4,7 @@ import { ViewModelLocator } from "../viewModelLocator";
 import { GComponent } from "../../utils/GComponent";
 import { RainDrawer } from "./RainDrawer";
 import { WindDrawer } from "./windDrawer";
+import { SnowDrawer } from "./snowDrawer";
 import { ClearDrawer } from "./clearDrawer";
 
 export class BackGroundComponent extends GComponent {
@@ -34,6 +35,9 @@ export class BackGroundComponent extends GComponent {
 
     startCanvas(type) {
             switch(type){
+                case "Snow":
+                    this.canvaDrawer = new SnowDrawer(this.canv);
+                    break;
                 case "Rain":
                     this.canvaDrawer = new RainDrawer(this.canv);
                     break;

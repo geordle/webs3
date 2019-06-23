@@ -4,7 +4,6 @@ import { GComponent } from "../../utils/GComponent";
 import { bootstrapCss } from "../../externalStyles/bootstrap";
 import { ViewModelLocator } from "../viewModelLocator";
 import Two from "two.js";
-import Chart from "chart.js";
 
 export class MonsterElement extends GComponent {
 
@@ -38,12 +37,7 @@ export class MonsterElement extends GComponent {
         });
         this.two.bind('update', this.jiggle());
         this.triggerRefetch();
-        this.gauge();
     }
-
-    gauge(){
-    }
-
 
     jiggle() {
         let rotation = 0;
