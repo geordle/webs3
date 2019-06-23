@@ -20,3 +20,9 @@ g-grid{
     position: absolute;
 margin-top: -40px;
 }
+
+#background {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+}

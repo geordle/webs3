@@ -1,62 +1,62 @@
 export class RainDrawer {
 
     constructor(canvas) {
-        this.draw(canvas)
+
+        this.ctx = canvas.getContext("2d");
+        this.w = canvas.width;
+        this.h = canvas.height;
+        this.ctx.strokeStyle = "rgba(174,194,224,0.5)";
+        this.ctx.lineWidth = 1;
+        this.ctx.lineCap = "round";
+
+
+        this.init();
+
+
     }
-    draw(canvas) {
-        function draw() {
-            ctx.clearRect(0, 0, w, h);
-            for (let c = 0; c < particles.length; c++) {
-                const p = particles[c];
-                ctx.beginPath();
-                ctx.moveTo(p.x, p.y);
-                ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
-                ctx.stroke();
-            }
-            move();
+
+    init(){
+        this.init = [];
+        this.maxParts = 1000;
+        for (let a = 0; a < this.maxParts; a++) {
+            this.init.push({
+                x: Math.random() * this.w,
+                y: Math.random() * this.h,
+                l: Math.random(),
+                xs: -4 + Math.random() * 4 + 2,
+                ys: Math.random() * 10 + 10,
+            });
         }
 
-        function move() {
-            for (let b = 0; b < particles.length; b++) {
-                const p = particles[b];
-                p.x += p.xs;
-                p.y += p.ys;
-                if (p.x > w || p.y > h) {
-                    p.x = Math.random() * w;
-                    p.y = -20;
-                }
-            }
+        this.particles = [];
+        for (var b = 0; b < this.maxParts; b++) {
+            this.particles[b] = this.init[b];
         }
+    }
 
-        if (canvas.getContext) {
-            var ctx = canvas.getContext('2d');
-            var w = canvas.width;
-            var h = canvas.height;
-            ctx.strokeStyle = 'rgba(174,194,224,0.5)';
-            ctx.lineWidth = 1;
-            ctx.lineCap = 'round';
+    
+    draw() {
+        this.ctx.clearRect(0, 0, this.w, this.h);
+        for (let c = 0; c < this.particles.length; c++) {
+            const p = this.particles[c];
+            this.ctx.beginPath();
+            this.ctx.moveTo(p.x, p.y);
+            this.ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+            this.ctx.stroke();
+        }
+        this.move();
+    }
 
 
-            const init = [];
-            const maxParts = 1000;
-            for (let a = 0; a < maxParts; a++) {
-                init.push({
-                    x: Math.random() * w,
-                    y: Math.random() * h,
-                    l: Math.random(),
-                    xs: -4 + Math.random() * 4 + 2,
-                    ys: Math.random() * 10 + 10
-                })
+    move() {
+        for (let b = 0; b < this.particles.length; b++) {
+            const p = this.particles[b];
+            p.x += p.xs;
+            p.y += p.ys;
+            if (p.x > this.w || p.y > this.h) {
+                p.x = Math.random() * this.w;
+                p.y = -20;
             }
-
-            var particles = [];
-            for (var b = 0; b < maxParts; b++) {
-                particles[b] = init[b];
-            }
-
-
-            setInterval(draw, 30);
-
         }
     }
 }

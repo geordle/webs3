@@ -1,4 +1,3 @@
-import { getType } from "./classHelpers";
 
 export class Observable {
     static bindProp(_vm, origin, prop, ...events) {
