@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7146134c-595c-4e44-a62f-b29bfd9801b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/CanvasUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElement.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/grid/gridComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid/gridComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/monster/monsterElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monster/monsterElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/WeatherService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/WeatherService.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,11 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/CanvasUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+            <state relative-caret-position="285">
+              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utils/WeatherService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -136,7 +139,6 @@
         <option value="$PROJECT_DIR$/src/domain/configurators/monsterDao.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/utils/WeatherService.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/components/viewModelLocator.js" />
         <option value="$PROJECT_DIR$/src/domain/monster.js" />
@@ -170,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/components/monster/monsterElement.js" />
         <option value="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" />
         <option value="$PROJECT_DIR$/src/utils/CanvasUtils.js" />
+        <option value="$PROJECT_DIR$/src/utils/WeatherService.js" />
       </list>
     </option>
   </component>
@@ -380,7 +383,7 @@
       <workItem from="1561064010501" duration="8169000" />
       <workItem from="1561223014940" duration="7693000" />
       <workItem from="1561246885660" duration="1640000" />
-      <workItem from="1561289251350" duration="2879000" />
+      <workItem from="1561289251350" duration="3283000" />
     </task>
     <task id="LOCAL-00001" summary="stuff">
       <created>1558981983231</created>
@@ -393,7 +396,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205655000" />
+    <option name="totallyTimeSpent" value="206059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -541,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/WeatherService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -958,8 +954,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/CanvasUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+        <state relative-caret-position="285">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/WeatherService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
