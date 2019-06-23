@@ -1,4 +1,5 @@
 import ComponentModule from './components/componentModule'
+import 'fullScreen.js';
 import {
     activateModules
 } from "./utils/register";
