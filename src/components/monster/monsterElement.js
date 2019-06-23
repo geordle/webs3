@@ -4,6 +4,7 @@ import { GComponent } from "../../utils/GComponent";
 import { bootstrapCss } from "../../externalStyles/bootstrap";
 import { ViewModelLocator } from "../viewModelLocator";
 import Two from "two.js";
+import { redraw } from "../../utils/CanvasUtils";
 
 export class MonsterElement extends GComponent {
 
@@ -30,10 +31,17 @@ export class MonsterElement extends GComponent {
             }
         });
         this.rect = this.two.makeRectangle(this.two.width / 2, this.two.height / 2, 50, 50);
-        this.rect.fill = color;
+        let htmlCanvasElement = document.createElement('canvas');
+        htmlCanvasElement.height = this.two.height /2;
+        htmlCanvasElement.width = this.two.width/2;
+        let context = htmlCanvasElement.getContext('2d');
+        redraw(context, this._vm.image);
+
+        const texture = new Two.Texture(htmlCanvasElement.toDataURL());
+        this.rect.fill = texture ;
+
         this.root.querySelector(".monster").addEventListener("click", () => {
             this.isJiggeling = true;
-
         });
         this.two.bind('update', this.jiggle());
         this.triggerRefetch();

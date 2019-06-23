@@ -3,6 +3,7 @@ import html from "./monsterDrawPane.html";
 import { GComponent } from "../../utils/GComponent";
 import { bootstrapCss } from "../../externalStyles/bootstrap";
 import { ViewModelLocator } from "../viewModelLocator";
+import { redraw } from "../../utils/CanvasUtils";
 
 /**
  * @property {MonsterConfiguratorVM} _vm
@@ -40,10 +41,11 @@ export class MonsterDrawPane extends GComponent {
         let paint;
         const self = this;
         this.context = htmlCanvasElement.getContext("2d");
+        const {width, height} = htmlCanvasElement;
 
         function addClick(x, y) {
             if (x && y) {
-                self._vm.image.push([x - this.offsetLeft - 40, y - this.offsetTop - 52]);
+                self._vm.image.push([(x - this.offsetLeft - 40)/width, (y - this.offsetTop - 52)/height]);
             } else {
                 self._vm.image.push([]);
             }
@@ -82,28 +84,6 @@ export class MonsterDrawPane extends GComponent {
     }
 
     redraw() {
-        this.context.clearRect(
-            0,
-            0,
-            this.context.canvas.width,
-            this.context.canvas.height,
-        );
-        this.context.strokeStyle = "#070201";
-        this.context.lineJoin = "round";
-        this.context.lineWidth = 3;
-
-        let prevPoint = this._vm.image[0];
-        for (const click of this._vm.image) {
-            this.context.beginPath();
-            if (prevPoint.length === 0) {
-                this.context.moveTo(click[0], click[1]);
-            } else {
-                this.context.moveTo(prevPoint[0], prevPoint[1]);
-            }
-            this.context.lineTo(click[0], click[1]);
-            this.context.closePath();
-            this.context.stroke();
-            prevPoint = click;
-        }
+        redraw(this.context, this._vm.image);
     }
 }

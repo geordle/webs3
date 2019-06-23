@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7146134c-595c-4e44-a62f-b29bfd9801b7" name="Default Changelist" comment="" />
+    <list default="true" id="7146134c-595c-4e44-a62f-b29bfd9801b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/CanvasUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid/gridComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid/gridComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/monster/monsterElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monster/monsterElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,70 +24,45 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/monster/monsterElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="259">
+              <caret line="37" column="11" lean-forward="true" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#1062#1063#0" expanded="true" />
+                <element signature="e#1109#1110#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/background/index.html">
+        <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="274">
+              <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#2779#2780#0" expanded="true" />
+                <element signature="e#2830#2831#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/background/RainDrawer.js">
+        <entry file="file://$PROJECT_DIR$/src/utils/CanvasUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+            <state relative-caret-position="300">
+              <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/app/index.html">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/app/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/background/backGroundComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#1057#1058#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -98,9 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pro</find>
-      <find>babel.rc</find>
-      <find>.babelrc</find>
       <find>name</find>
       <find>console</find>
       <find>two</find>
@@ -128,6 +108,9 @@
       <find>exce</find>
       <find>opacity</find>
       <find>rgba</find>
+      <find>image</find>
+      <find>Texture</find>
+      <find>this</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/domain/configurators/earthMonsterConfigurator.js" />
         <option value="$PROJECT_DIR$/src/domain/configurators/windMonsterConfigurator.js" />
         <option value="$PROJECT_DIR$/src/domain/configurators/waterMonsterConfigurator.js" />
         <option value="$PROJECT_DIR$/src/domain/configurators/monsterConfiguratorStateHolder.js" />
@@ -149,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/components/monster/monster.js" />
         <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.html" />
         <option value="$PROJECT_DIR$/src/components/componentModule.js" />
-        <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.css" />
         <option value="$PROJECT_DIR$/src/components/incinarator/incinarator.html" />
         <option value="$PROJECT_DIR$/src/components/incinarator/incinarator.css" />
         <option value="$PROJECT_DIR$/src/domain/configurators/monsterDao.js" />
@@ -172,21 +153,23 @@
         <option value="$PROJECT_DIR$/src/components/incinarator/incinarator.js" />
         <option value="$PROJECT_DIR$/src/components/monster/monsterVM.js" />
         <option value="$PROJECT_DIR$/src/domain/configurators/monsterBindable.js" />
-        <option value="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" />
         <option value="$PROJECT_DIR$/src/utils/classHelpers.js" />
         <option value="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" />
-        <option value="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" />
         <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.js" />
         <option value="$PROJECT_DIR$/src/utils/GComponent.js" />
         <option value="$PROJECT_DIR$/src/utils/viewModel.js" />
-        <option value="$PROJECT_DIR$/src/components/monster/monsterElement.js" />
         <option value="$PROJECT_DIR$/src/components/form/monsterForm.js" />
         <option value="$PROJECT_DIR$/src/utils/Observable.js" />
         <option value="$PROJECT_DIR$/src/components/app/index.html" />
         <option value="$PROJECT_DIR$/src/components/app/index.css" />
         <option value="$PROJECT_DIR$/src/components/background/index.html" />
-        <option value="$PROJECT_DIR$/src/components/grid/gridComponent.css" />
         <option value="$PROJECT_DIR$/src/components/background/RainDrawer.js" />
+        <option value="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" />
+        <option value="$PROJECT_DIR$/src/components/grid/gridComponent.css" />
+        <option value="$PROJECT_DIR$/src/components/grid-element/gridElement.css" />
+        <option value="$PROJECT_DIR$/src/components/monster/monsterElement.js" />
+        <option value="$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js" />
+        <option value="$PROJECT_DIR$/src/utils/CanvasUtils.js" />
       </list>
     </option>
   </component>
@@ -224,14 +207,14 @@
               <item name="webs3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="grid" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
               <item name="webs3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="background" type="462c0819:PsiDirectoryNode" />
+              <item name="grid-element" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
@@ -239,6 +222,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="monster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webs3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="monsterDrawPane" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webs3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -384,6 +380,7 @@
       <workItem from="1561064010501" duration="8169000" />
       <workItem from="1561223014940" duration="7693000" />
       <workItem from="1561246885660" duration="1640000" />
+      <workItem from="1561289251350" duration="2879000" />
     </task>
     <task id="LOCAL-00001" summary="stuff">
       <created>1558981983231</created>
@@ -396,7 +393,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202776000" />
+    <option name="totallyTimeSpent" value="205655000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,13 +408,13 @@
     <frame x="956" y="0" width="964" height="1035" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4768" visible="true" weight="0.3590568" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4768" visible="true" weight="0.22186495" />
       <window_info id="Structure" order="1" sideWeight="0.5232" side_tool="true" weight="0.244373" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49973643" weight="0.32745314" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49303323" weight="0.337763" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49303323" visible="true" weight="0.337763" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994641" weight="0.4090408" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -513,21 +510,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="stuff" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/incinarator/incinaratorVM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/goal.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -555,24 +537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElement.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/incinarator/incinarator.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -688,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monster/monster.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -707,9 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monster/monsterVM.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/viewModelLocator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -721,9 +679,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///tmp/Spectacle.JvDxvy/Screenshot_20190622_225006.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file:///tmp/Spectacle.JvDxvy/Screenshot_20190622_225006.png" />
     <entry file="file://$PROJECT_DIR$/src/components/fieldViewModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -755,9 +711,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/classHelpers.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/classHelpers.js" />
     <entry file="file://$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -795,16 +749,6 @@
           <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -855,17 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElementVM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="77" lean-forward="true" selection-start-line="2" selection-start-column="77" selection-end-line="2" selection-end-column="77" />
-          <folding>
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -909,67 +842,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monster/monsterElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="40" />
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElement.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid-element/gridElementVM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/monster/monsterVM.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/monster/monster.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/background/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/grid/gridComponent.css">
+    <entry file="file://$PROJECT_DIR$/src/components/background/RainDrawer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="288">
+          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/background/backGroundComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/two.js/build/two.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1269">
+          <caret line="11509" column="16" selection-start-line="11509" selection-start-column="16" selection-end-line="11509" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/monster/monsterElement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="37" column="11" lean-forward="true" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/background/RainDrawer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+        <state relative-caret-position="274">
+          <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#2779#2780#0" expanded="true" />
+            <element signature="e#2830#2831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/CanvasUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
         </state>
       </provider>
     </entry>

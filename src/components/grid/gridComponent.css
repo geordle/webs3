@@ -25,6 +25,14 @@ g-form {
     background-color: rgba(0, 255, 1, 0.2);
 }
 
+.sjahari g-element {
+    background-color: rgba(255, 241, 9, 0.2);
+}
+
+.icepole g-element {
+    background-color: rgba(71, 225, 255, 0.2);
+}
+
 div {
     /* background-color: rgb(100, 1, 1); */
     height: 100%;

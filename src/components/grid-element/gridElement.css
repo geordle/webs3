@@ -17,7 +17,7 @@
 }
 
 .monster-over{ 
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(48, 48, 48, 0.42);
     transform: scale(1.2);
     z-index: 4000;
 }

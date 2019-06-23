@@ -58,7 +58,7 @@ export class GridElementVM extends MonsterBindable {
     }
 
     onElementDropped(par) {
-        
+        this.isDraggingOver = false;
         const id = par.dataTransfer.getData("monsterConfigurator");
         const origin = JSON.parse(id);
         const { _x, _y, _regionName } = this;
@@ -72,7 +72,6 @@ export class GridElementVM extends MonsterBindable {
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber - 1), y, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber), y + 1, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber), y - 1, _regionName).neighborDropped();
-        this.isDraggingOver = false;        
         this.notifyAllPropertyChanged();
     }
 
