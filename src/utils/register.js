@@ -6,7 +6,4 @@ export function activateModules(param) {
     param.forEach(el => {
        registerComponents(...el.components);
     });
-
-
-
 }

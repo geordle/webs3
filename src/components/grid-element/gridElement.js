@@ -8,39 +8,41 @@ import { MonsterElement } from "../monster/monsterElement";
 export class GridElement extends GComponent {
     constructor() {
         super({ css, html, isScoped: true, styleSheets: [bootstrapCss] });
-        this.x = this.getAttribute('x-pos');
-        this.y = this.getAttribute('y-pos');
-        this.regionName = this.getAttribute('region-name');
+        this.x = this.getAttribute("x-pos");
+        this.y = this.getAttribute("y-pos");
+        this.regionName = this.getAttribute("region-name");
         let gridElementViewModel = ViewModelLocator
             .getInstance()
             .getGridElementViewModel(this.x, this.y, this.regionName);
         if(gridElementViewModel.isRock){
             this.root
-                .querySelector('.base')
-                .classList.add('rock');
+                .querySelector(".base")
+                .classList.add("rock");
         }
         this._bindVm(gridElementViewModel);
-        this.observe('containsMonster', (value)=> {
+        this.observe("containsMonster", (value)=> {
             return this.updateMonster(value);
         });
 
 
-        this.observe('isDraggingOver', (val) => {
+        this.observe("isDraggingOver", (val) => {
             if(val){
-                this.root.querySelector('.base').classList.add('monster-over');
+                this.root.querySelector(".base").classList.add("monster-over");
             } else{
-                this.root.querySelector('.base').classList.remove('monster-over');
+                this.root.querySelector(".base").classList.remove("monster-over");
             }
-        })
+        });
         this.updateMonster(this._vm.containsMonster);
         this.triggerRefetch();
     }
 
     updateMonster(containsMonster){
-        const gridElement =  this.root.querySelector('.grid-element');
-        gridElement.innerHTML = '';
+        const gridElement =  this.root.querySelector(".grid-element");
+        gridElement.innerHTML = "";
         if(containsMonster){
-            gridElement.appendChild(new MonsterElement(this._vm))
+            let monsterElement = gridElement.appendChild(new MonsterElement(this._vm));
+                monsterElement.afterRender();
+
         }
     };
 

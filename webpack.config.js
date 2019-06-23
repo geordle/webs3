@@ -2,12 +2,11 @@ const path = require("path");
 const webpack = require("webpack");
 const PrettierPlugin = require("prettier-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-require("babel-core/register");
 require("babel-polyfill");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: ['babel-polyfill', "./src/index.js"],
+    entry: ["babel-polyfill", "./src/index.js"],
     mode: "development",
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -26,54 +25,54 @@ module.exports = {
         },
         {
             test: /\.global.css$/,
-            use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader']
+            use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader"]
         },
         {
             test: /\.(png|svg|jpg|gif)$/,
             use: [
-                'file-loader'
+                "file-loader"
             ]
         },
         {
             test: /\.min.css$/,
-            use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader']
+            use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader"]
         },
         {
             test: /(?<!global|min)\.css$/,
-            use: 'raw-loader',
+            use: "raw-loader",
         },
         {
             test: /\.html$/,
-            use: 'raw-loader',
+            use: "raw-loader",
         },
         //only for bootstrap
         {
             test: /\.(scss)$/,
             use: [{
-                loader: 'style-loader', // inject CSS to page
+                loader: "style-loader", // inject CSS to page
             }, {
-                loader: 'css-loader', // translates CSS into CommonJS modules
+                loader: "css-loader", // translates CSS into CommonJS modules
             }, {
-                loader: 'postcss-loader', // Run post css actions
+                loader: "postcss-loader", // Run post css actions
                 options: {
                     plugins: function () { // post css plugins, can be exported to postcss.config.js
                         return [
-                            require('precss'),
-                            require('autoprefixer')
+                            require("precss"),
+                            require("autoprefixer")
                         ];
                     }
                 }
             }, {
-                loader: 'sass-loader' // compiles Sass to CSS
+                loader: "sass-loader" // compiles Sass to CSS
             }]
         },
         ],
     },
     plugins: [new HtmlWebpackPlugin({
-        title: 'Monster Zoo',
-        favicon : 'icon.png'
+        title: "Monster Zoo",
+        favicon : "icon.png"
     }), new MiniCssExtractPlugin({
-        filename: 'style.css',
+        filename: "style.css",
     })],
     stats: {
         colors: true,

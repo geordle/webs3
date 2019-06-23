@@ -1,6 +1,3 @@
-import { MonsterType } from "./monsterType";
-import { weather } from "../components/weather";
-
 export class Monster {
 
     uuid;
@@ -12,6 +9,8 @@ export class Monster {
     color;
     legs = 0;
     discriminator;
+
+    powerName;
 
     image = [];
     _power = 0;

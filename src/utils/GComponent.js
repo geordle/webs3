@@ -108,6 +108,9 @@ export class GComponent extends HTMLElement {
         }
     }
 
+    afterRender() {
+    }
+
     triggerRefetch() {
         this._vm.notifyForObserver(this);
     }

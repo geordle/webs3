@@ -30,17 +30,18 @@ export class GridElementVM extends MonsterBindable {
     }
 
     onDragOver(event) {
-        if (!this.isRock) {
+        if (!this.isRock && !this.containsMonster) {
             event.preventDefault();
         }
     }
 
-    onDragEnter(ev){
-        if (!this.isRock) {
+    onDragEnter(ev) {
+        if (!this.isRock && !this.containsMonster) {
             this.isDraggingOver = true;
         }
     }
-    onDragLeave(){
+
+    onDragLeave() {
         this.isDraggingOver = false;
     }
 
@@ -54,7 +55,7 @@ export class GridElementVM extends MonsterBindable {
 
     neighborDropped() {
         this.shouldPerformAction = true;
-        this.notifyPropertyChanged('shouldPerformAction');
+        this.notifyPropertyChanged("shouldPerformAction");
     }
 
     onElementDropped(par) {
@@ -65,10 +66,10 @@ export class GridElementVM extends MonsterBindable {
         if (_x === origin.x && _y === origin.y && _regionName === origin.region) {
             return;
         }
-        const rowNumber = Number.parseInt(_x.replace(/^\D*/g, ''))
+        const rowNumber = Number.parseInt(_x.replace(/^\D*/g, ""));
         const y = Number.parseInt(_y);
         this._monster = MonsterDao.getInstance().moveMonster({ region: _regionName, x: _x, y: _y }, origin);
-        ViewModelLocator.getInstance().getGridElementViewModel("Row" +(rowNumber + 1), y, _regionName).neighborDropped();
+        ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber + 1), y, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber - 1), y, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber), y + 1, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber), y - 1, _regionName).neighborDropped();
@@ -77,13 +78,9 @@ export class GridElementVM extends MonsterBindable {
 
 
     update() {
-
-
         const { _x, _y, _regionName } = this;
         this._monster = MonsterDao.getInstance().getMonsterByLocation({ region: _regionName, x: _x, y: _y }) || {};
-
         this.notifyAllPropertyChanged();
     }
-
 
 }

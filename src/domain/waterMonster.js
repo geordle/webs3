@@ -30,6 +30,9 @@ export default class WaterMonster extends Monster {
         return (super.power * multiplier).toFixed(2);
     }
 
+    powerName = "WaterBeam";
+
+
     get arms() {
         return this._arms;
     }

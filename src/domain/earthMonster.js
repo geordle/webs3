@@ -23,6 +23,8 @@ export default class EarthMonster extends Monster{
         return super.power * multiplier;
     }
 
+    powerName = "SandAttack";
+
 
     get canFly(){
         return false;

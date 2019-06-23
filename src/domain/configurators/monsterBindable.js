@@ -12,6 +12,10 @@ export class MonsterBindable extends ViewModel{
         return this._monster.discriminator;
     }
 
+    get powerName(){
+        return this._monster.powerName;
+    }
+
     set arms(val) {
         this._monster.arms = val;
     }

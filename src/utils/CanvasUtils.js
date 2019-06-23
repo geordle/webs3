@@ -1,4 +1,4 @@
-export function redraw(context, pointArray) {
+export function redraw(context, pointArray, color = "black") {
 
     const {height, width} = context.canvas;
 
@@ -8,7 +8,7 @@ export function redraw(context, pointArray) {
         width,
         height,
     );
-    context.strokeStyle = "#070201";
+    context.strokeStyle = color;
     context.lineJoin = "round";
     context.lineWidth = 3;
 

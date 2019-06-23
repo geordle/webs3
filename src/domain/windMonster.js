@@ -34,6 +34,8 @@ export class WindMonster extends Monster {
         return this.fur === "Scales" || this.fur === "Hair";
     }
 
+    powerName = "WingAttack";
+
 
     set arms(value) {
         this._arms = 2;
