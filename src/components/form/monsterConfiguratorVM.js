@@ -19,7 +19,7 @@ export class MonsterConfiguratorVM extends ViewModel {
 
     switchIsDrawing() {
         this.isEditing = !this.isEditing;
-        this.drawButtonText = this.isEditing ? "draw" : "save";
+        this.drawButtonText = this.isEditing ? "edit" : "save";
     }
 
     set arms(value) {

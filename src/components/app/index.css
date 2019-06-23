@@ -1,4 +1,4 @@
-.panel{
+.panel {
     padding: 0;
     min-width: 230px;
     height: 100%;
@@ -8,21 +8,21 @@
 g-form {
 }
 
-#grid-holder{
-    width: 1040px;
-    height: 1040px;
+#grid-holder {
+    width: 1020px;
+    height: 1020px;
     padding: 10px;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 
 }
 
-g-grid{
+g-grid {
     width: 1000px;
 }
 
 #field-select {
     position: absolute;
-margin-top: -40px;
+    margin-top: -40px;
 }
 
 #background {
