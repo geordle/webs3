@@ -23,6 +23,15 @@ export class GridElement extends GComponent {
         this.observe('containsMonster', (value)=> {
             return this.updateMonster(value);
         });
+
+
+        this.observe('isDraggingOver', (val) => {
+            if(val){
+                this.root.querySelector('.base').classList.add('monster-over');
+            } else{
+                this.root.querySelector('.base').classList.remove('monster-over');
+            }
+        })
         this.updateMonster(this._vm.containsMonster);
         this.triggerRefetch();
     }

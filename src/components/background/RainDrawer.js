@@ -6,7 +6,7 @@ export class RainDrawer {
         this.w = canvas.width;
         this.h = canvas.height;
         this.ctx.strokeStyle = "rgba(174,194,224,0.5)";
-        this.ctx.lineWidth = 1;
+        this.ctx.lineWidth = 2;
         this.ctx.lineCap = "round";
 
 

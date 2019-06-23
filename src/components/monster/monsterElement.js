@@ -4,16 +4,9 @@ import { GComponent } from "../../utils/GComponent";
 import { bootstrapCss } from "../../externalStyles/bootstrap";
 import { ViewModelLocator } from "../viewModelLocator";
 import Two from "two.js";
-
-function colorToRgba(color) {
-    switch (color) {
-        case "Blue":
-            return "rgba(0,0,255,0)";
-    }
-}
+import Chart from "chart.js";
 
 export class MonsterElement extends GComponent {
-
 
     constructor(vm) {
         super({
@@ -32,7 +25,6 @@ export class MonsterElement extends GComponent {
 
         const { color } = this._vm;
 
-
         this.observe("shouldPerformAction", (should) => {
             if (should) {
                 this.root.querySelector('.monster').click();
@@ -46,6 +38,10 @@ export class MonsterElement extends GComponent {
         });
         this.two.bind('update', this.jiggle());
         this.triggerRefetch();
+        this.gauge();
+    }
+
+    gauge(){
     }
 
 

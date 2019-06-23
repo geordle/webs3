@@ -4,6 +4,9 @@ canvas{
 
 }
 
+#background {pointer-events:none;
+}
+
 .base {
     height: 100%;
 }

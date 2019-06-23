@@ -22,7 +22,9 @@ margin-top: -40px;
 }
 
 #background {
+    pointer-events: none;
     position: absolute;
     width: 1000px;
     height: 1000px;
+    z-index: 500;
 }

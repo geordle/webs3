@@ -7,15 +7,14 @@ require("babel-polyfill");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: ['babel-polyfill',"./src/index.js"],
+    entry: ['babel-polyfill', "./src/index.js"],
     mode: "development",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "main.js",
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components|build|dist)/,
                 use: {
@@ -27,11 +26,17 @@ module.exports = {
             },
             {
                 test: /\.global.css$/,
-                use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader']
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
             },
             {
                 test: /\.min.css$/,
-                use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader']
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
                 test: /(?<!global|min)\.css$/,
@@ -66,7 +71,7 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin(), new MiniCssExtractPlugin({
         filename: 'style.css',
-    })] ,
+    })],
     stats: {
         colors: true,
     },

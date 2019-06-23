@@ -22,8 +22,9 @@ export class Incinarator extends GComponent {
         }).appendTo(this.root.querySelector("#garbage-container"));
         two.bind("update", function() {
             if (rect && rotationSpeed < 0.3) {
-                rotationSpeed += 0.004;
+                rotationSpeed += 0.006;
                 rect.rotation += rotationSpeed;
+                rect.scale -= 0.09 * rotationSpeed;
             } else if (rect) {
                 two.remove(rect);
             }

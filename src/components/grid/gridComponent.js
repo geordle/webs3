@@ -10,12 +10,13 @@ export class GridComponent extends GComponent {
         super({ css, html, isScoped: true, styleSheets: [bootstrapCss] });
         this.regionName = this.getAttribute('region');
         this.generateSquares();
-
+        this.root.querySelector('.base').classList.toggle(this.regionName.toLowerCase());
     }
 
     static register() {
         customElements.define("g-grid", GridComponent);
     }
+
 
 
     generateSquares() {

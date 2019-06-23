@@ -10,6 +10,8 @@ export class GridElementVM extends MonsterBindable {
         this._x = x;
         this._y = y;
         this._regionName = name;
+        this.isDraggingOver = false;
+
         this._monster = MonsterDao.getInstance().getMonsterByLocation({ x, y, region: name }) || {};
         this.shouldPerformAction = false;
     }
@@ -33,6 +35,14 @@ export class GridElementVM extends MonsterBindable {
         }
     }
 
+    onDragEnter(ev){
+        if (!this.isRock) {
+            this.isDraggingOver = true;
+        }
+    }
+    onDragLeave(){
+        this.isDraggingOver = false;
+    }
 
     onDragStart(event) {
         event.dataTransfer.setData("monsterConfigurator", JSON.stringify({
@@ -62,6 +72,7 @@ export class GridElementVM extends MonsterBindable {
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber - 1), y, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber), y + 1, _regionName).neighborDropped();
         ViewModelLocator.getInstance().getGridElementViewModel("Row" + (rowNumber), y - 1, _regionName).neighborDropped();
+        this.isDraggingOver = false;        
         this.notifyAllPropertyChanged();
     }
 

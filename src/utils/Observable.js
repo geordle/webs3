@@ -15,12 +15,8 @@ export class Observable {
         let val = _vm[prop];
         let getter = () => val;
         let setter = arg => (val = arg);
-        let prototypeOf = Object.getPrototypeOf(_vm);
-
         const descriptor = this.unwrapRecursive(_vm, prop);
-
         if (descriptor) {
-
             setter = descriptor.set;
             getter = descriptor.get;
         }

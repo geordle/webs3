@@ -6,6 +6,8 @@ g-form {
     min-width: 230px;
 }
 
+
+
 .base {
     position: absolute;
     display: grid;
@@ -18,8 +20,13 @@ g-form {
 
 }
 
+
+.jungle g-element {
+    background-color: rgba(0, 255, 1, 0.2);
+}
+
 div {
-    background-color: rgba(1, 1, 1, 0.05);
+    /* background-color: rgb(100, 1, 1); */
     height: 100%;
     width: 100%;
 }
@@ -28,8 +35,7 @@ g-element {
     position: absolute;
     height: 100px;
     width: 100px;
-    border: solid black 1px;
-
+    border: solid black 0.5px;
 }
 
 

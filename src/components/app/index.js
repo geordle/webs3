@@ -14,6 +14,8 @@ export class AppComponent extends GComponent{
         this.observe('region', (region)=> {
             this.root.querySelector('#grid-holder').innerHTML= `<g-grid region="${region}"></g-grid>`;
         });
+
+        
     }
 
     static register(){
