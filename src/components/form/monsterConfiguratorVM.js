@@ -1,9 +1,6 @@
-import MonsterFactory from "../../domain/monsterConfiguratorFactory";
 import { ViewModel } from "../../utils/viewModel";
-import { genUuid } from "../../utils/logicHelpers";
 import { ViewModelLocator } from "../viewModelLocator";
-import { StoragePrefix } from "../../utils/Constants";
-import { MonsterDao } from "../../domain/configurators/monsterDao";
+import { MonsterDao } from "../../services/monsterDao";
 
 
 export class MonsterConfiguratorVM extends ViewModel {
@@ -25,22 +22,60 @@ export class MonsterConfiguratorVM extends ViewModel {
         this.drawButtonText = this.isEditing ? "draw" : "save";
     }
 
-    get hasExistingMonster() {
-        return !!this.monsterConfigurator.uuid;
+    set arms(value) {
+        this.monsterConfigurator.arms = Number(value);
+        this.notifyPropertyChanged("maxLegs", "legs", "minLegs");
     }
 
-    get maxEyes() {
-        return this.monsterConfigurator.maxEyes;
+    set monsterName(value) {
+
+        if (value.length < 10) {
+            this.monsterConfigurator.name = value;
+        }
+        this.notifyPropertyChanged("cantSave");
     }
 
-    get minEyes() {
-        return this.monsterConfigurator.minEyes;
+    set monsterType(type) {
+        this._monsterType = type;
+        this.monsterConfiguratorStateHolder.setType(type);
+        this.notifyAllPropertyChanged("monsterType");
     }
 
-    get cantSave() {
-        return !this.monsterConfigurator.name || this.monsterConfigurator.name.length === 0;
+    get monsterType() {
+        return this._monsterType;
     }
 
+    onDragStart(event) {
+        this.monsterConfigurator.save();
+        event.dataTransfer.setData("monsterConfigurator", JSON.stringify({ x: 0, y: 0, region: 0 }));
+    }
+
+    update() {
+        this.monsterConfiguratorStateHolder.reset();
+        this.isEditing = false;
+        this.reset = true;
+        this.notifyAllPropertyChanged();
+    }
+
+    onDragOver(event) {
+        if (!this.isRock) {
+            event.preventDefault();
+        }
+    }
+
+    onElementDropped(par) {
+        const id = par.dataTransfer.getData("monsterConfigurator");
+        const origin = JSON.parse(id);
+        try {
+            const monster = MonsterDao.getInstance().moveMonster({ region: 0, x: 0, y: 0 }, origin);
+            this.monsterConfiguratorStateHolder.setMonster(monster);
+            this.switchIsDrawing();
+            this.notifyAllPropertyChanged();
+        } catch (e) {
+
+        }
+
+    }
     get maxArms() {
         return this.monsterConfigurator.maxArms;
     }
@@ -58,13 +93,61 @@ export class MonsterConfiguratorVM extends ViewModel {
         return this.monsterConfigurator.colors;
     }
 
+
     get furTypes() {
         return this.monsterConfigurator.furTypes;
     }
 
-    set arms(value) {
-        this.monsterConfigurator.arms = Number(value);
-        this.notifyPropertyChanged("maxLegs", "legs", "minLegs");
+    get image() {
+        return this.monsterConfigurator.image;
+    }
+
+    set image(value) {
+        this.monsterConfigurator.image = value;
+    }
+
+
+    get monsterConfigurator() {
+        return this.monsterConfiguratorStateHolder.configurator;
+    }
+
+
+    get armType() {
+        return this.monsterConfigurator.armType;
+    }
+
+    set armType(value) {
+        this.monsterConfigurator.armType = value;
+    }
+
+    reset = false;
+
+    get armTypes() {
+        return this.monsterConfigurator.armTypes;
+    }
+
+    get power() {
+        return this.monsterConfigurator.power;
+    }
+
+    set power(value) {
+        this.monsterConfigurator.power = value;
+    }
+
+    set fur(value) {
+        this.monsterConfigurator.fur = value;
+    }
+
+    get fur() {
+        return this.monsterConfigurator.fur;
+    }
+
+    get color() {
+        return this.monsterConfigurator.color;
+    }
+
+    set color(value) {
+        this.monsterConfigurator.color = value;
     }
 
     get arms() {
@@ -95,106 +178,20 @@ export class MonsterConfiguratorVM extends ViewModel {
         return this.monsterConfigurator.name;
     }
 
-    set monsterName(value) {
-
-        if (value.length < 10) {
-            this.monsterConfigurator.name = value;
-        }
-        this.notifyPropertyChanged("cantSave");
+    get hasExistingMonster() {
+        return !!this.monsterConfigurator.uuid;
     }
 
-    set fur(value) {
-        this.monsterConfigurator.fur = value;
+    get maxEyes() {
+        return this.monsterConfigurator.maxEyes;
     }
 
-    get fur() {
-        return this.monsterConfigurator.fur;
+    get minEyes() {
+        return this.monsterConfigurator.minEyes;
     }
 
-    get color() {
-        return this.monsterConfigurator.color;
-    }
-
-    set color(value) {
-        this.monsterConfigurator.color = value;
-    }
-
-    set monsterType(type) {
-        this._monsterType = type;
-        this.monsterConfiguratorStateHolder.setType(type);
-        this.notifyAllPropertyChanged("monsterType");
-    }
-
-    get monsterType() {
-        return this._monsterType;
-    }
-
-    onDragStart(event) {
-        this.monsterConfigurator.save();
-        event.dataTransfer.setData("monsterConfigurator", JSON.stringify({ x: 0, y: 0, region: 0 }));
-    }
-
-    get image() {
-        return this.monsterConfigurator.image;
-    }
-
-    set image(value) {
-        this.monsterConfigurator.image = value;
-    }
-
-    get monsterConfigurator() {
-        return this.monsterConfiguratorStateHolder.configurator;
-    }
-
-    get armType() {
-        return this.monsterConfigurator.armType;
-    }
-
-    set armType(value) {
-        this.monsterConfigurator.armType = value;
-    }
-
-    reset = false;
-
-    get armTypes() {
-        return this.monsterConfigurator.armTypes;
-    }
-
-    get power() {
-        return this.monsterConfigurator.power;
-    }
-
-    set power(value) {
-        this.monsterConfigurator.power = value;
-    }
-
-    update() {
-        this.monsterConfiguratorStateHolder.reset();
-        this.isEditing = false;
-        this.reset = true;
-        this.notifyAllPropertyChanged();
-    }
-
-
-    onDragOver(event) {
-        if (!this.isRock) {
-            event.preventDefault();
-        }
-    }
-
-
-    onElementDropped(par) {
-        const id = par.dataTransfer.getData("monsterConfigurator");
-        const origin = JSON.parse(id);
-        try {
-            const monster = MonsterDao.getInstance().moveMonster({ region: 0, x: 0, y: 0 }, origin);
-            this.monsterConfiguratorStateHolder.setMonster(monster);
-            this.switchIsDrawing();
-            this.notifyAllPropertyChanged();
-        } catch (e) {
-
-        }
-
+    get cantSave() {
+        return !this.monsterConfigurator.name || this.monsterConfigurator.name.length === 0;
     }
 
 

@@ -41,7 +41,9 @@ export class GComponent extends HTMLElement {
         htmlDivElement.querySelectorAll("[g-on]").forEach(value => {
             value.getAttribute("g-on").split(",").forEach(value1 => {
                 const [event, method] = value1.split(":");
-                value.addEventListener(event, arg => this._vm[method](arg));
+                value.addEventListener(event, arg => {
+                    return this._vm[method](arg);
+                });
             });
 
         });

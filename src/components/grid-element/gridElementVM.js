@@ -1,6 +1,6 @@
 import field from "../../domain/field";
-import { MonsterDao } from "../../domain/configurators/monsterDao";
-import { MonsterBindable } from "../../domain/configurators/monsterBindable";
+import { MonsterDao } from "../../services/monsterDao";
+import { MonsterBindable } from "../../domain/monsterBindable";
 import { ViewModelLocator } from "../viewModelLocator";
 
 

@@ -41,11 +41,11 @@ export class MonsterDrawPane extends GComponent {
         let paint;
         const self = this;
         this.context = htmlCanvasElement.getContext("2d");
-        const {width, height} = htmlCanvasElement;
+        const { width, height } = htmlCanvasElement;
 
         function addClick(x, y) {
             if (x && y) {
-                self._vm.image.push([(x - this.offsetLeft - 40)/width, (y - this.offsetTop - 52)/height]);
+                self._vm.image.push([(x - this.offsetLeft - 40) / width, (y - this.offsetTop - 52) / height]);
             } else {
                 self._vm.image.push([]);
             }
@@ -72,11 +72,10 @@ export class MonsterDrawPane extends GComponent {
             }
         });
 
-        function stopDraw(_) {
+        const stopDraw = _ => {
             paint = false;
             addClick(null, null);
         };
-
         htmlCanvasElement.addEventListener("mouseup", () => stopDraw());
         htmlCanvasElement.addEventListener("mouseleave", () => stopDraw());
         this.redraw();

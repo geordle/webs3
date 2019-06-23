@@ -11,11 +11,11 @@ export class WaterMonsterConfigurator extends MonsterConfigurator {
     /**
      * @param {MonsterElement} value
      * */
-    set monster(value){
+    set monster(value) {
         this._monster = new WaterMonster(value);
     }
 
-    get monster(){
+    get monster() {
         return this._monster;
     }
 

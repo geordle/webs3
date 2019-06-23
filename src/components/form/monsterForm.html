@@ -44,5 +44,6 @@
         <input g-model="power" max="10" type="range" g-bind="disabled:isEditing" class="form-control-range" id="power" min="0">
     </div>
     <g-monster-draw></g-monster-draw>
+    <button type="button"  g-on="click:switchIsDrawing" g-bind="disabled:cantSave" class="btn-primary btn"><span g-model="drawButtonText"></span> </button>
     <g-incinarator></g-incinarator>
 </form>

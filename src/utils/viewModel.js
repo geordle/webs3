@@ -3,7 +3,7 @@ export class ViewModel {
         if (this && properties.every(value => value)) {
             for (const property of properties) {
                 const observerProp = this[`__Observable_${property}`];
-                if(observerProp){
+                if (observerProp) {
                     observerProp.notifyAction();
                 }
             }
@@ -11,19 +11,19 @@ export class ViewModel {
     }
 
     notifyAllPropertyChanged(...except) {
-        this.observableProps(except).forEach(value => value.notifyAction())
+        this.observableProps(except).forEach(value => value.notifyAction());
     }
 
 
-    observableProps(...except){
-        return  Object.keys(Object.getOwnPropertyDescriptors(this))
+    observableProps(...except) {
+        return Object.keys(Object.getOwnPropertyDescriptors(this))
             .filter(value => except.indexOf(value) === -1)
             .filter(value => value.match(/^__Observable/))
-            .map(value => this[value])
+            .map(value => this[value]);
 
     }
 
-    notifyForObserver(observer){
-        this.observableProps().forEach(value => value.notifyForObserver(observer))
+    notifyForObserver(observer) {
+        this.observableProps().forEach(value => value.notifyForObserver(observer));
     }
 }

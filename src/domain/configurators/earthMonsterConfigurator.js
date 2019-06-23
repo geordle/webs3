@@ -2,13 +2,13 @@ import MonsterConfigurator from "./monsterConfigurator";
 import { FireMonster } from "../fireMonster";
 import EarthMonster from "../earthMonster";
 
-export class EarthMonsterConfigurator extends MonsterConfigurator{
+export class EarthMonsterConfigurator extends MonsterConfigurator {
 
 
     /**
      * @param {MonsterElement} value
      * */
-    set monster(value){
+    set monster(value) {
         this._monster = new EarthMonster(value);
     }
 

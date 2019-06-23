@@ -1,5 +1,5 @@
 import { ViewModelLocator } from "./viewModelLocator";
-import { weatherService } from "../utils/WeatherService";
+import { weatherService } from "../services/WeatherService";
 import field from "../domain/field";
 import { weather } from "./weather";
 import { ViewModel } from "../utils/viewModel";

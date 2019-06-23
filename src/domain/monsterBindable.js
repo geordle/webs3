@@ -1,6 +1,6 @@
-import { ViewModel } from "../../utils/viewModel";
+import { ViewModel } from "../utils/viewModel";
 
-export class MonsterBindable extends ViewModel{
+export class MonsterBindable extends ViewModel {
 
     _monster;
 
@@ -8,11 +8,11 @@ export class MonsterBindable extends ViewModel{
         return this._monster.arms;
     }
 
-    get monsterType(){
+    get monsterType() {
         return this._monster.discriminator;
     }
 
-    get powerName(){
+    get powerName() {
         return this._monster.powerName;
     }
 
@@ -80,7 +80,7 @@ export class MonsterBindable extends ViewModel{
         return this._monster;
     };
 
-    get actualPower(){
+    get actualPower() {
         return this._monster.actualPower;
     }
 
@@ -88,7 +88,7 @@ export class MonsterBindable extends ViewModel{
         return this._monster.canSwim;
     }
 
-    get canFly(){
+    get canFly() {
         return this._monster.canFly;
     }
 
@@ -96,11 +96,11 @@ export class MonsterBindable extends ViewModel{
         return this._monster.power;
     }
 
-    set power(value){
+    set power(value) {
         this._monster.power = value;
     }
 
-    get canDoSpecial(){
+    get canDoSpecial() {
         return this._monster.canDoSpecial;
     }
 

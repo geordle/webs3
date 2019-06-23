@@ -1,12 +1,14 @@
-import { genUuid } from "../../utils/logicHelpers";
-import { StoragePrefix } from "../../utils/Constants";
-import { MonsterParser } from "./monsterParser";
-import { ViewModelLocator } from "../../components/viewModelLocator";
+import { genUuid } from "../utils/logicHelpers";
+import { StoragePrefix } from "../utils/Constants";
+import { MonsterParser } from "../domain/configurators/monsterParser";
+import { ViewModelLocator } from "../components/viewModelLocator";
 
 export class MonsterDao {
 
 
-    /** @param {MonsterElement} monster
+    /**
+     * @param target
+     * @param origin
      * */
     moveMonster(target, origin) {
         let targetKey = `${StoragePrefix.LOCATION_PREFIX}${target.x},${target.y},${target.region}`;
@@ -15,7 +17,7 @@ export class MonsterDao {
         if (filledInTarget) {
             throw Error("Element already filled");
         }
-        
+
         const originMonster = this.getMonsterByLocation(origin);
         localStorage.setItem(targetKey, JSON.stringify(originMonster));
         localStorage.removeItem(originKey);
@@ -24,15 +26,13 @@ export class MonsterDao {
         return originMonster;
     }
 
-    saveMonster(target, monster){
-        if (!monster.uuid){
+    saveMonster(target, monster) {
+        if (!monster.uuid) {
             monster.uuid = genUuid();
         }
         let targetKey = `${StoragePrefix.LOCATION_PREFIX}${target.x},${target.y},${target.region}`;
         localStorage.setItem(targetKey, JSON.stringify(monster));
     }
-    
-
 
 
     getMonsterByLocation({ x, y, region }) {
@@ -56,7 +56,7 @@ export class MonsterDao {
         return MonsterParser.getInstance().parseMonster(monster);
     }
 
-    removeMonster({ x, y, region }){
+    removeMonster({ x, y, region }) {
         let key = `${StoragePrefix.LOCATION_PREFIX}${x},${y},${region}`;
         localStorage.removeItem(key);
         ViewModelLocator.getInstance().getGridElementViewModel(x, y, region).update();

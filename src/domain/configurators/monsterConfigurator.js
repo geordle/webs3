@@ -2,8 +2,8 @@
  * @property {Monster} _monster
 * */
 import { Monster } from "../monster";
-import { MonsterDao } from "./monsterDao";
-import { MonsterBindable } from "./monsterBindable";
+import { MonsterDao } from "../../services/monsterDao";
+import { MonsterBindable } from "../monsterBindable";
 
 export default class MonsterConfigurator extends MonsterBindable {
 

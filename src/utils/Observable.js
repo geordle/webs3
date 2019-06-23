@@ -15,25 +15,13 @@ export class Observable {
         let val = _vm[prop];
         let getter = () => val;
         let setter = arg => (val = arg);
-        const descriptor = this.unwrapRecursive(_vm, prop);
+        const descriptor = this.getPropertyDescriptionOnProto(_vm, prop);
         if (descriptor) {
             setter = descriptor.set;
             getter = descriptor.get;
         }
-        const notifyAction = () => {
-            const actions = _vm[`__Observable_${prop}`]
-                .events.flatMap(([key, val]) => val);
-            if (actions) {
-                for (const action of actions) {
-                    action(getter.call(_vm));
-                }
-            }
-
-        };
         Object.defineProperty(_vm, prop, {
-            get: () => {
-                return getter.call(_vm);
-            },
+            get: () => getter.call(_vm),
             set: newValue => {
                 if (newValue !== undefined) {
                     val = newValue;
@@ -43,7 +31,29 @@ export class Observable {
             },
             configurable: false,
         });
-        const notifyForObserver = (observer) => {
+        const notifyAction = this.getNotifyWatchersAction(_vm, prop, getter);
+        const notifyForObserver = this.getNotifyObserverAction(_vm, prop, getter);
+        _vm[`__Observable_${prop}`] = { events: [], notifyAction, notifyForObserver };
+        if (_vm[`__Observable_${prop}`].events.length > 10) {
+            _vm[`__Observable_${prop}`].events.shift();
+        }
+    }
+
+    static getNotifyWatchersAction(_vm, prop, getter) {
+        return () => {
+            const actions = _vm[`__Observable_${prop}`]
+                .events.flatMap(([key, val]) => val);
+            if (actions) {
+                for (const action of actions) {
+                    action(getter.call(_vm));
+                }
+            }
+
+        };
+    }
+
+    static getNotifyObserverAction(_vm, prop, getter) {
+        return (observer) => {
             const actions = _vm[`__Observable_${prop}`]
                 .events
                 .filter(([key]) => key === observer)
@@ -54,21 +64,17 @@ export class Observable {
                 }
             }
         };
-        _vm[`__Observable_${prop}`] = { events: [], notifyAction, notifyForObserver };
-        if (_vm[`__Observable_${prop}`].events.length > 10) {
-            _vm[`__Observable_${prop}`].events.shift();
-        }
     }
 
-    /* allows to recurse trhough proto chain untill prop is found*/
-    static unwrapRecursive(obj, prop) {
+    /* recurse through proto chain until prop is found on proto or chain fully traversed*/
+    static getPropertyDescriptionOnProto(obj, prop) {
         const descr = Object.getPrototypeOf(obj);
         if (!descr) return null;
         const propDesc = Object.getOwnPropertyDescriptor(descr, prop);
         if (propDesc) {
             return propDesc;
         } else {
-            return this.unwrapRecursive(descr, prop);
+            return this.getPropertyDescriptionOnProto(descr, prop);
         }
     }
 }

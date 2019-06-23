@@ -4,19 +4,17 @@ import { MonsterType } from "../monsterType";
 import { Monster } from "../monster";
 
 
-
-
 export class FireMonsterConfigurator extends MonsterConfigurator {
 
 
-    constructor(){
+    constructor() {
         super();
     }
 
     /**
      * @param {Monster} value
-    * */
-    set monster(value){
+     * */
+    set monster(value) {
         this._monster = new FireMonster(value);
     }
 
@@ -26,7 +24,7 @@ export class FireMonsterConfigurator extends MonsterConfigurator {
         return this.arms <= 2 ? 2 : 0;
     }
 
-    get minLegs(){
+    get minLegs() {
         return this.maxLegs;
     }
 

@@ -13,7 +13,7 @@ export class WindMonsterConfigurator extends MonsterConfigurator {
     /**
      * @param {MonsterElement} value
      * */
-    set monster(value){
+    set monster(value) {
         this._monster = new WindMonster(value);
     }
 

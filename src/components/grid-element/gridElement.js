@@ -14,21 +14,21 @@ export class GridElement extends GComponent {
         let gridElementViewModel = ViewModelLocator
             .getInstance()
             .getGridElementViewModel(this.x, this.y, this.regionName);
-        if(gridElementViewModel.isRock){
+        if (gridElementViewModel.isRock) {
             this.root
                 .querySelector(".base")
                 .classList.add("rock");
         }
         this._bindVm(gridElementViewModel);
-        this.observe("containsMonster", (value)=> {
+        this.observe("containsMonster", (value) => {
             return this.updateMonster(value);
         });
 
 
         this.observe("isDraggingOver", (val) => {
-            if(val){
+            if (val) {
                 this.root.querySelector(".base").classList.add("monster-over");
-            } else{
+            } else {
                 this.root.querySelector(".base").classList.remove("monster-over");
             }
         });
@@ -36,13 +36,12 @@ export class GridElement extends GComponent {
         this.triggerRefetch();
     }
 
-    updateMonster(containsMonster){
-        const gridElement =  this.root.querySelector(".grid-element");
+    updateMonster(containsMonster) {
+        const gridElement = this.root.querySelector(".grid-element");
         gridElement.innerHTML = "";
-        if(containsMonster){
+        if (containsMonster) {
             let monsterElement = gridElement.appendChild(new MonsterElement(this._vm));
-                monsterElement.afterRender();
-
+            monsterElement.afterRender();
         }
     };
 

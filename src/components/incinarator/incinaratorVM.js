@@ -1,5 +1,5 @@
 import { ViewModel } from "../../utils/viewModel";
-import { MonsterDao } from "../../domain/configurators/monsterDao";
+import { MonsterDao } from "../../services/monsterDao";
 
 
 export class IncinaratorVM extends ViewModel {

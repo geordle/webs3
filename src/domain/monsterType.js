@@ -1,11 +1,11 @@
 const MonsterType = {
-    FIRE: 'Fire',
-    WATER: 'Water',
-    EARTH: 'Earth',
-    WIND: 'Wind'
+    FIRE: "Fire",
+    WATER: "Water",
+    EARTH: "Earth",
+    WIND: "Wind",
 };
 
 Object.freeze(MonsterType);
 
 
-export {MonsterType};
+export { MonsterType };

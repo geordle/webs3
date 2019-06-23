@@ -12,11 +12,11 @@ export class Incinarator extends GComponent {
             html,
             isScoped: true,
             styleSheets: [bootstrapCss],
-            vm: ViewModelLocator.getInstance().incinaratorVm
+            vm: ViewModelLocator.getInstance().incinaratorVm,
         });
         let rect;
         let rotationSpeed = 0.01;
-        var two = new Two({
+        const two = new Two({
             width: 200,
             height: 200,
         }).appendTo(this.root.querySelector("#garbage-container"));
@@ -39,8 +39,6 @@ export class Incinarator extends GComponent {
             }
 
         });
-
-
 
     }
 

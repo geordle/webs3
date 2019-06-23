@@ -10,16 +10,16 @@ export class ViewModelLocator {
         this._registerSingleton(MonsterConfiguratorVM, "monsterConfigurator");
         this._registerSingleton(MonsterConfiguratorStateHolder, "monsterConfiguratorStateHolder");
         this._registerSingleton(FieldViewModel, "fieldViewModel");
-        this._registerSingleton(IncinaratorVM, 'incinaratorVm')
+        this._registerSingleton(IncinaratorVM, "incinaratorVm");
     }
 
 
-    getAllGridElementViewModels(){
+    getAllGridElementViewModels() {
         return [...this._gridElementMap.values()].flat();
     }
 
     getGridElementViewModel(x, y, name) {
-        if(x===0, y===0, name===0){
+        if (x === 0, y === 0, name === 0) {
             return this.monsterConfigurator;
         }
 
@@ -45,9 +45,10 @@ export class ViewModelLocator {
         });
     }
 
-    clearField(){
+    clearField() {
         this._gridElementMap = new Map();
     }
+
     /**
      *
      * @returns {ViewModelLocator}

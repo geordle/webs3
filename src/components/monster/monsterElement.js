@@ -38,7 +38,8 @@ export class MonsterElement extends GComponent {
 
     async afterRender() {
         try {
-            await this.chart.render();
+            //TODO uncomment this
+            // await this.chart.render();
         } catch (e) {
             console.log(e);
         }
@@ -88,7 +89,7 @@ export class MonsterElement extends GComponent {
     }
 
     getChartOptions() {
-        return  {
+        return {
             chart: {
                 type: "radialBar",
             },
@@ -106,8 +107,8 @@ export class MonsterElement extends GComponent {
                             left: 0,
                             color: "#999",
                             opacity: 1,
-                            blur: 2
-                        }
+                            blur: 2,
+                        },
                     },
                     dataLabels: {
                         name: {
@@ -117,27 +118,27 @@ export class MonsterElement extends GComponent {
                         },
                         value: {
                             fontSize: "22px",
-                            formatter: function (val) {
-                                return val /10;
+                            formatter: function(val) {
+                                return val / 10;
                             },
-                            show:true
-                        }
-                    }
-                }
+                            show: true,
+                        },
+                    },
+                },
             },
             fill: {
                 colors: [function({ value, seriesIndex, w }) {
-                    if(value < 55) {
+                    if (value < 55) {
                         return "#7E36AF";
                     } else if (value >= 55 && value < 80) {
                         return "#164666";
                     } else {
                         return "#D9534F";
                     }
-                }]
+                }],
             },
             series: [this._vm.actualPower * 10],
-            labels: [this._vm.powerName]
+            labels: [this._vm.powerName],
         };
 
     }

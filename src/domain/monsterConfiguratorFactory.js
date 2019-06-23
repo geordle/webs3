@@ -31,7 +31,7 @@ export default class MonsterConfiguratorFactory {
      * @returns {MonsterConfiguratorFactory}
      */
     static getInstance() {
-        if(!this.instance){
+        if (!this.instance) {
             this.instance = new MonsterConfiguratorFactory();
         }
         return this.instance;
