@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7146134c-595c-4e44-a62f-b29bfd9801b7" name="Default Changelist" comment="t">
       <change beforePath="$PROJECT_DIR$/src/components/app/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/monster/monster.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monster/monster.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/monster/monster.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/monster/monster.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/background/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/background/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,38 +17,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/monster/monsterElement.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/GComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-                <element signature="e#1274#1275#0" expanded="true" />
-                <element signature="e#1645#1646#0" expanded="true" />
-                <element signature="n#afterRender#0;n#GComponent#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/background/index.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/background/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="36" selection-start-column="36" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -73,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/monster/monster.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -91,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/app/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="465">
+              <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -135,7 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AppComponent</find>
       <find>BackGroundComponent</find>
       <find>GridElem</find>
       <find>MonsterForm</find>
@@ -159,12 +142,13 @@
       <find>monster</find>
       <find>stats</find>
       <find>console.</find>
-      <find>hei</find>
       <find>console</find>
       <find>powername</find>
       <find>font-family: 'Roboto', sans-serif;</find>
-      <find>draw</find>
       <find>drawButtonText</find>
+      <find>draw</find>
+      <find>canvas</find>
+      <find>hei</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/grid-element/gridElementVM.js" />
         <option value="$PROJECT_DIR$/src/utils/WeatherService.js" />
@@ -222,8 +205,9 @@
         <option value="$PROJECT_DIR$/src/components/monster/monsterElement.js" />
         <option value="$PROJECT_DIR$/src/components/monster/monster.html" />
         <option value="$PROJECT_DIR$/src/components/form/monsterConfiguratorVM.js" />
-        <option value="$PROJECT_DIR$/src/components/app/index.css" />
         <option value="$PROJECT_DIR$/src/components/monster/monster.css" />
+        <option value="$PROJECT_DIR$/src/components/background/index.html" />
+        <option value="$PROJECT_DIR$/src/components/app/index.css" />
       </list>
     </option>
   </component>
@@ -263,6 +247,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webs3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="background" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webs3" type="b2602c69:ProjectViewProjectNode" />
@@ -463,7 +454,7 @@
       <workItem from="1561246885660" duration="1640000" />
       <workItem from="1561289251350" duration="15943000" />
       <workItem from="1561311949995" duration="9000" />
-      <workItem from="1561312028141" duration="2844000" />
+      <workItem from="1561312028141" duration="2968000" />
     </task>
     <task id="LOCAL-00001" summary="stuff">
       <created>1558981983231</created>
@@ -476,7 +467,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221572000" />
+    <option name="totallyTimeSpent" value="221696000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -594,16 +585,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="stuff" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/utils/logicHelpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/htmlHelpers.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -985,13 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/monster/monster.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -1023,13 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/app/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/form/monsterForm.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1041,6 +1008,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/monsterDrawPane/monsterDrawPane.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/background/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/background/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/app/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
         </state>
       </provider>
     </entry>
