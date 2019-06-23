@@ -53,6 +53,7 @@ export class SnowDrawer {
                 }
             }
         }
+        this.angle=0;
     }
 }
 
