@@ -15,9 +15,3 @@ fires submitted on class when event submit is triggered
 ```
 2-way binds to property arms   
 <hr>
-You can set properties on custom components too   
-
-```
-   
-    
-```
